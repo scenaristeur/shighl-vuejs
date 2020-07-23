@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/shighl-vuejs/precache-manifest.d8b1c79991be04f7bbdb3f97e7d7a385.js"
+  "/shighl-vuejs/precache-manifest.ad42f66392f2a7d1be444511795efdf7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "shighl-vuejs"});
