@@ -1,7 +1,35 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <!--<ShexLoader />-->
+  <div class="load-shape">
+    <div class="container">
+      <h1>{{ msg }}</h1>
+      <!--<ShexLoader />-->
+
+      To load a ShEx shape in your html page you will need to import the browserified
+      ShEx library modules (as i've not found how to import them in Vuejs component) : <br>
+      They can be found in the public/vendor/ folder of this repo or by installing with
+      <br>
+      <i>
+        npm install @shexjs/core @shexjs/loader @shexjs/parser
+      </i>
+      <br>
+      <br>
+      <div class="alert alert-secondary" role="alert">
+
+        <pre><code>
+
+          &lt;p&gt;Sample text here...&lt;/p&gt;
+          &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+
+          &lt;script src="./vendor/shex-core-browserify.min.js"&gt;&lt;/script&gt;
+          &lt;script src="./vendor/shex-loader-browserify.min.js"&gt;&lt;/script&gt;
+          &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;
+
+        </code></pre>
+      </div>
+
+
+    </div>
+
   </div>
 </template>
 
@@ -73,15 +101,15 @@ export default {
     /*this.rootElement = document.getElementById(this.root)
     console.log("ROOT Element",this.rootElement)
     this.initRootElement()*/
-  /*  this.shapes.forEach((shape) => {
-      this.initShape(shape)
-    });*/
+    /*  this.shapes.forEach((shape) => {
+    this.initShape(shape)
+  });*/
 
-    console.log("SHAPES",this.shapes)
-    console.log("FOOTPRINT_SHAPES",this.footprint_shapes)
-    console.log("TRANSLATE_SHAPES",this.translate_shapes)
+  console.log("SHAPES",this.shapes)
+  console.log("FOOTPRINT_SHAPES",this.footprint_shapes)
+  console.log("TRANSLATE_SHAPES",this.translate_shapes)
 
-  }
+}
 
 }
 }
@@ -93,6 +121,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.load-shape {
+  text-align: left;
+}
 h3 {
   margin: 40px 0 0;
 }

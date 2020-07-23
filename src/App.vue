@@ -2,7 +2,9 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/components">Components</router-link> |
+      <router-link to="/components">Shighl-Vuejs Components</router-link> |
+      <router-link to="/about">Shighl</router-link> |
+      <router-link to="/about">Shighl-Elements</router-link> | 
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
