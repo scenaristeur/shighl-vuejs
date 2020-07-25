@@ -7,9 +7,15 @@
         <b-tab title="First" active><p>Select a Tab to use a Form</p>
 
           <p>
-            currentShape : {{ currentShape}}<br><br>
-            Shapes : {{ shapes }}
+            <b-button disabled> Toggle Debug</b-button>
           </p>
+
+          <div class="brute">
+            currentShape : {{ currentShape}}<br>
+            shapes length ({{ shapes.length }}): {{ shapes }}<br>
+            footprint_shapes ({{ footprint_shapes.length}}): {{ footprint_shapes}}<br>
+            translate_shapes ({{ translate_shapes.length}}): {{ translate_shapes}}<br>
+          </div>
         </b-tab>
 
         <b-tab  v-for="shape in shapes" :key="shape.id" :title="shape.localname">
@@ -18,9 +24,6 @@
         </b-tab>
       </b-tabs>
     </div>
-
-
-
 
 
   </div>
@@ -50,7 +53,14 @@ export default {
     },
     shapes () {
       return this.$store.state.shapes
+    },
+    footprint_shapes () {
+      return this.$store.state.footprint_shapes
+    },
+    translate_shapes () {
+      return this.$store.state.translate_shapes
     }
+
   }
 }
 </script>

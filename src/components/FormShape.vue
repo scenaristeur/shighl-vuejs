@@ -1,28 +1,24 @@
 <template>
   <div class="hello">
 
-  <FormExpression :expression="shape.expression" />
-
-    <ul  v-for="p in properties" :key="p.key" >
-      <li>  {{ p.key }} : {{ p.value }}
-
-      </li>
-    </ul>
-
-{{ properties }}
-
-  Shape : {{ shape }}
+    <FormExpression :expression="shape.expression" />
+    <DebugProperties :object="shape"/>
+    <div class="brute">
+      Shape : {{ shape }}
+    </div>
   </div>
 </template>
 
 <script>
 import store from '@/store'
 import FormExpression from '@/components/FormExpression.vue'
+import DebugProperties from '@/components/DebugProperties.vue'
 
 export default {
   name: 'FormShape',
   components: {
-    FormExpression
+    FormExpression,
+    DebugProperties
   },
   props: {
     shape: Object
@@ -35,14 +31,6 @@ export default {
     }
   },
   computed: {
-    properties(){
-      let props  = []
-      for (const [key, value] of Object.entries(this.shape)) {
-      let  p = {key: key, value: value}
-        props.push(p)
-      }
-      return props
-    },
     currentShape () {
       return this.$store.state.currentShape
     },

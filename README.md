@@ -82,3 +82,6 @@ npx vue-cli-service build --mode production --dest lib --target wc-async --name 
 Async comp
 https://blog.logrocket.com/how-async-components-can-optimize-performance-in-vue-apps/
 https://fr.vuejs.org/v2/guide/components-dynamic-async.html
+
+# GTTD (GOOD TRACKS to Dev)  
+https://youtu.be/b9XasJth5i0

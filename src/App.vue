@@ -3,8 +3,8 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/components">Shighl-Vuejs Components</router-link> |
-      <router-link to="/about">Shighl</router-link> |
-      <router-link to="/about">Shighl-Elements</router-link> | 
+  <!--    <router-link to="/about">Shighl</router-link> |
+      <router-link to="/about">Shighl-Elements</router-link> |-->
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -31,5 +31,8 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.brute {
+  background-color: pink;
 }
 </style>

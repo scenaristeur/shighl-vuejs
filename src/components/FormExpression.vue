@@ -1,28 +1,30 @@
 <template>
   <div class="hello">
 
+    <ExpressionSwitcher :expression="expression" />
     Expression de type {{ expression.type }}
+    <DebugProperties :object="expression"/>
 
 
-    <h1 v-if="expression.type === 'EachOf'">
-      EachOf form eachof 
-    </h1>
-    <h1 v-else-if="expression.type === 'EachOf'">OneOf</h1>
-    <h1 v-else>TODO {{ expression.type }}</h1>
 
-    <br>
-    {{ expression}}
+    <div class="brute">
+      Expression {{ expression }}
+    </div>
+
 
   </div>
 </template>
 
 <script>
 import store from '@/store'
+import ExpressionSwitcher from '@/components/ExpressionSwitcher.vue'
+import DebugProperties from '@/components/DebugProperties.vue'
 
 export default {
   name: 'FormExpression',
   components: {
-
+    ExpressionSwitcher,
+    DebugProperties
   },
   props: {
     expression: Object

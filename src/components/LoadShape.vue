@@ -3,7 +3,7 @@
     <div class="container">
 
 
-
+      currentShape : {{ currentShape.id }}<br>
       <FormTab />
 
       <h1>{{ msg }}</h1>
@@ -14,7 +14,7 @@
       They can be found in the public/vendor/ folder of this repo or by installing with
       <br>
       <i>
-        npm install @shexjs/core @shexjs/loader @shexjs/parser
+        npm install @shexjs/core @shexjs/loader<!-- @shexjs/parser -->
       </i>
       <br>
       <br>
@@ -30,17 +30,16 @@
 
           &lt;script src="./vendor/shex-core-browserify.min.js"&gt;&lt;/script&gt;
           &lt;script src="./vendor/shex-loader-browserify.min.js"&gt;&lt;/script&gt;
-          &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;
+
 
         </code></pre>
       </div>
-      
-      <div class="alert alert-secondary" role="alert">
+      <!--  &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;-->
+
+      <div class="brute">
         shape_url : {{ shape_url }}<br>
         currentShape : {{ currentShape }}<br>
-        shapes length ({{ shapes.length }}): {{ shapes }}<br>
-        footprint_shapes ({{ footprint_shapes.length}}): {{ footprint_shapes}}<br>
-        translate_shapes ({{ translate_shapes.length}}): {{ translate_shapes}}<br>
+
       </div>
 
     </div>
@@ -66,7 +65,7 @@ export default {
   data: function () {
     return {
       shape_url: "https://holacratie.solid.community/public/Schema/tension.shex",
-      currentShape: "",
+      currentShape: {id:"Loading Shape..."},
       shapes: [],
       footprint_shapes: [],
       translate_shapes: []
@@ -79,7 +78,7 @@ export default {
 
     console.log("shexCore", shexCore)
     console.log("shexLoader", shexLoader)
-    console.log("shexParser", shexParser)
+    /*    console.log("shexParser", shexParser)*/
     console.log("ShExJison", ShExJison)
     /*  let sl = new ShexLoader()
     console.log("SL",sl)*/

@@ -1,9 +1,12 @@
 <template>
-  <div class="hello">
+  <div class="modele">
+    <h5>Modele</h5>
 
+    <div class="brute">
 
-
-</div>
+    </div>
+    
+  </div>
 </template>
 
 <script>
@@ -12,8 +15,8 @@ import store from '@/store'
 export default {
   name: 'ComponentModele',
   props: {
-  //  msg: String
-},
+    //  msg: String
+  },
   data: function () {
     return {
       currentShape: "",
@@ -22,3 +25,10 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.modele {
+  background-color: blue;
+}
+
+</style>
