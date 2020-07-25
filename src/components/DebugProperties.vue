@@ -1,16 +1,17 @@
 <template>
   <div class="properties" >
 
-    <h5>DEBUG Properties</h5>
-    <ul  v-for="p in properties" :key="p.key" >
-      <li>  {{ p.key }} : {{ p.value }}
 
+    <ul  v-for="p in properties" :key="p.key" >
+      <li>
+        {{ p.key }} : {{ p.value }}
       </li>
     </ul>
 
     <div class="brute">
-    {{ properties }}
-  </div>
+      {{ $options.name }}
+      {{ properties }}
+    </div>
 
 
   </div>
@@ -20,7 +21,7 @@
 import store from '@/store'
 
 export default {
-  name: 'ComponentModele',
+  name: 'DebugProperties',
   props: {
     object: Object
   },
@@ -44,6 +45,6 @@ export default {
 
 <style scoped>
 .properties {
-  background-color: yellow;
+  background-color: var(--lemon-yellow-crayola);
 }
 </style>

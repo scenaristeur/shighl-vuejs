@@ -2,13 +2,14 @@
   <div class="hello">
 
     <ExpressionSwitcher :expression="expression" />
-    Expression de type {{ expression.type }}
-    <DebugProperties :object="expression"/>
+
 
 
 
     <div class="brute">
-      Expression {{ expression }}
+      {{ $options.name }}<br>
+      {{ expression }}
+      <DebugProperties :object="expression"/>
     </div>
 
 

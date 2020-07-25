@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="tab">
 
 
     <div>
@@ -7,10 +7,11 @@
         <b-tab title="First" active><p>Select a Tab to use a Form</p>
 
           <p>
-            <b-button disabled> Toggle Debug</b-button>
+            <b-button disabled>Toggle Debug</b-button>
           </p>
 
-          <div class="brute">
+          <div class="brute-hide">
+          <h5>{{ $options.name }}</h5>
             currentShape : {{ currentShape}}<br>
             shapes length ({{ shapes.length }}): {{ shapes }}<br>
             footprint_shapes ({{ footprint_shapes.length}}): {{ footprint_shapes}}<br>
@@ -19,7 +20,7 @@
         </b-tab>
 
         <b-tab  v-for="shape in shapes" :key="shape.id" :title="shape.localname">
-          <p>  {{ shape.id }}</p>
+          <p>  <a :href="shape.id" target="_blank">{{ shape.id }}</a></p>
           <FormShape :shape="shape"/>
         </b-tab>
       </b-tabs>

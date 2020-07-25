@@ -1,33 +1,35 @@
 <template>
-  <div class="shape">
+  <div class="shape-or">
 
-    <FormExpression :expression="shape.expression" />
+    <FormRadio :shapeExprs="valueExpr.shapeExprs"/>
 
     <div class="brute">
       <h5>{{ $options.name }}</h5>
-      Shape : {{ shape }}
-      <DebugProperties :object="shape"/>
+      TODO shapeExprs <br>
+      {{ valueExpr }}<br>
+      <DebugProperties :object="valueExpr" />
     </div>
+
   </div>
 </template>
 
 <script>
 import store from '@/store'
-import FormExpression from '@/components/FormExpression.vue'
 import DebugProperties from '@/components/DebugProperties.vue'
+import FormRadio from '@/components/FormRadio.vue'
+
 
 export default {
-  name: 'FormShape',
+  name: 'ShapeOr',
   components: {
-    FormExpression,
-    DebugProperties
+    DebugProperties, FormRadio
   },
   props: {
-    shape: Object
+    valueExpr: Object
   },
+
   data: function () {
     return {
-
       /*  currentShape: "",
       shapes: [],*/
     }
@@ -35,10 +37,15 @@ export default {
   computed: {
     currentShape () {
       return this.$store.state.currentShape
-    },
-    shapes () {
-      return this.$store.state.shapes
     }
   }
 }
 </script>
+
+<style scoped>
+.modele {
+  background-color: var(--celeste);
+
+}
+
+</style>

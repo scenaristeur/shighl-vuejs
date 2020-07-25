@@ -1,33 +1,33 @@
 <template>
-  <div class="shape">
-
-    <FormExpression :expression="shape.expression" />
+  <div class="modele">
+    <FormInput :valueExpr="valueExpr"/>
 
     <div class="brute">
       <h5>{{ $options.name }}</h5>
-      Shape : {{ shape }}
-      <DebugProperties :object="shape"/>
+      TODO : values, nodeKind, datatype
+      {{ valueExpr }}<br>
+      <DebugProperties :object="valueExpr" />
     </div>
+
   </div>
 </template>
 
 <script>
 import store from '@/store'
-import FormExpression from '@/components/FormExpression.vue'
 import DebugProperties from '@/components/DebugProperties.vue'
+import FormInput from '@/components/FormInput.vue'
 
 export default {
-  name: 'FormShape',
+  name: 'ShapeNodeConstraint',
   components: {
-    FormExpression,
-    DebugProperties
+    DebugProperties, FormInput
   },
   props: {
-    shape: Object
+    valueExpr: Object
   },
+
   data: function () {
     return {
-
       /*  currentShape: "",
       shapes: [],*/
     }
@@ -35,10 +35,15 @@ export default {
   computed: {
     currentShape () {
       return this.$store.state.currentShape
-    },
-    shapes () {
-      return this.$store.state.shapes
     }
   }
 }
 </script>
+
+<style scoped>
+.modele {
+  background-color: var(--celeste);
+
+}
+
+</style>

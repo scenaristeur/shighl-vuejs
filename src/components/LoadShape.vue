@@ -1,6 +1,5 @@
 <template>
   <div class="load-shape">
-    <div class="container">
 
 
       currentShape : {{ currentShape.id }}<br>
@@ -36,13 +35,12 @@
       </div>
       <!--  &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;-->
 
-      <div class="brute">
+      <div class="brute-hide">
         shape_url : {{ shape_url }}<br>
         currentShape : {{ currentShape }}<br>
 
       </div>
 
-    </div>
 
   </div>
 </template>
@@ -112,6 +110,7 @@ export default {
       }, err => {
         console.log("erreur ",err)
         alert(err.message)
+        app.currentShape.id = err.message
       }
     );
     console.log("loaded")
@@ -164,9 +163,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.load-shape {
-  text-align: left;
-}
 h3 {
   margin: 40px 0 0;
 }

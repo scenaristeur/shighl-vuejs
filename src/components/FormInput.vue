@@ -1,13 +1,14 @@
 <template>
-  <div class="modele">
-    <h5>{{ $options.name }}</h5>
-    <!-- <componentName :attribut="property"/> -->
+  <div class="input">
 
-    attribut : {{ attribut }}
+
+    <b-input-group size="lg">
+      <b-form-input></b-form-input>
+    </b-input-group>
 
     <div class="brute">
-
-      <hr>
+      <h5>{{ $options.name }}</h5>
+      valueExpr : {{ valueExpr }}
     </div>
 
   </div>
@@ -18,12 +19,12 @@ import store from '@/store'
 //  import componentName from '@/components/componentName.vue'
 
 export default {
-  name: 'ComponentModele',
+  name: 'FormInput',
   components: {
     //  componentName
   },
   props: {
-    attribut: String
+    valueExpr: Object
   },
 
   data: function () {

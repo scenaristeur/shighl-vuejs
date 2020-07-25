@@ -8,7 +8,12 @@
       <a href="https://github.com/scenaristeur/shighl-vuejs"
       target="_blank" rel="noopener">Shighl-vuejs repo</a>.
     </p>
-    <p>First attempt : Build Form Components based on Vuejs from ShEx shapes.
+    <p>First attempt : Build Form Components based on Vuejs from ShEx shapes.<br>
+      WHY ? <br>
+      Forms based on shapes allow you to describe your form in a text file using ShEx notation. 
+      You can share distribute, reuse, modify this file the way you want.
+      So apps, websites, webapps, native apps can have the same Form flow,
+      to build same data structure, providing a magical step to interoperability.
     </p>
 
     <ul>

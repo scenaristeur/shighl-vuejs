@@ -1,35 +1,48 @@
 <template>
-  <div class="hello">
+  <div class="modele">
+    <h5>  <FormLabel :text="expression.predicate" /></h5>
 
-Field
+    <ShapeTripleConstraint  :valueExpr="expression.valueExpr"/>
+
+    <div class="brute">
+      <h5>{{ $options.name }}</h5>
+      {{ expression }}
+    </div>
 
   </div>
 </template>
 
 <script>
 import store from '@/store'
+import ShapeTripleConstraint from '@/components/ShapeTripleConstraint.vue'
+import FormLabel from '@/components/FormLabel.vue'
 
 export default {
   name: 'FormField',
   components: {
-
+    ShapeTripleConstraint, FormLabel
   },
   props: {
-    //  msg: String
+    expression: Object
   },
+
   data: function () {
     return {
-      /*  currentShape: "",
-      shapes: [],*/
+      currentShape: "",
+      shapes: [],
     }
   },
   computed: {
-    currentShape () {
-      return this.$store.state.currentShape
-    },
-    shapes () {
-      return this.$store.state.shapes
-    }
+
   }
 }
 </script>
+
+<style scoped>
+.modele {
+  background-color: var(--celeste);
+  border-color: black;
+  border-width: 2px;
+}
+
+</style>
