@@ -3,7 +3,7 @@
 PREDICATE SELECT: {{ predicate}}
 -
     <div>
-      <b-form-select v-model="selected" :options="options"></b-form-select>
+      <b-form-select v-model="selected" :options="options" @change='updateValue'></b-form-select>
       <b-button variant="secondary">New</b-button>
     </div>
     <div class="brute">
@@ -61,7 +61,13 @@ export default {
     currentShape () {
       return this.$store.state.currentShape
     }
-  }
+  },
+  methods: {
+    updateValue (e) {
+      console.log(e, this.currentShape, this.predicate)
+      //this.$store.commit('updateValue', e.target.value)
+    }
+  },
 }
 </script>
 

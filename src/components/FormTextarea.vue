@@ -1,7 +1,7 @@
 <template>
   <div class="textarea">
 PREDICATE TEXTAREA {{ predicate  }}
-<b-textarea value="flow">BOO</b-textarea>
+<b-textarea value="flow" @change="updateValue">BOO</b-textarea>
 
 
 <!--
@@ -41,7 +41,13 @@ export default {
     currentShape () {
       return this.$store.state.currentShape
     }
-  }
+  },
+  methods: {
+    updateValue (e) {
+      console.log(e, this.currentShape, this.predicate)
+      //this.$store.commit('updateValue', e.target.value)
+    }
+  },
 }
 </script>
 

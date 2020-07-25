@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ce51b28d7d0b54b76645",
+    "revision": "5df9eb4e14175b3f38dd",
     "url": "/shighl-vuejs/css/about.e2424bb7.css"
   },
   {
-    "revision": "8a025e92fbcda0e0d262",
+    "revision": "aba3573b9b15fa6b303e",
     "url": "/shighl-vuejs/css/app.3b747ab7.css"
   },
   {
-    "revision": "75fb5f313b82f13c7e22",
-    "url": "/shighl-vuejs/css/chunk-58a5dc1f.fd6b7970.css"
+    "revision": "255b3ec73d00a827e234",
+    "url": "/shighl-vuejs/css/chunk-04bc4fee.573d1d7a.css"
   },
   {
-    "revision": "4042962738257ce329d2",
-    "url": "/shighl-vuejs/css/chunk-71b6b9fa.f3893fb2.css"
+    "revision": "1bf4950f3dc46a2bef68",
+    "url": "/shighl-vuejs/css/chunk-0cd7e1c6.f5484035.css"
   },
   {
-    "revision": "e1386c683dd64007d027",
-    "url": "/shighl-vuejs/css/chunk-72d8e0d7.56ca10c6.css"
+    "revision": "e06de8ba1a93ab92478c",
+    "url": "/shighl-vuejs/css/chunk-2d7aed58.5c867e60.css"
   },
   {
-    "revision": "8337efa29e6087440d58",
-    "url": "/shighl-vuejs/css/chunk-a20da704.7328f269.css"
+    "revision": "b4e495ee3fd06675fcdf",
+    "url": "/shighl-vuejs/css/chunk-650fa489.9ffe46e2.css"
   },
   {
     "revision": "3691bd824cec85e575ed",
@@ -36,32 +36,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "8521054ebd379a4f158b24fdddbce346",
+    "revision": "f55e69e8f3df335835ebc9382c7b2673",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "ce51b28d7d0b54b76645",
-    "url": "/shighl-vuejs/js/about.3054dc34.js"
+    "revision": "5df9eb4e14175b3f38dd",
+    "url": "/shighl-vuejs/js/about.dbacf890.js"
   },
   {
-    "revision": "8a025e92fbcda0e0d262",
-    "url": "/shighl-vuejs/js/app.8c39b705.js"
+    "revision": "aba3573b9b15fa6b303e",
+    "url": "/shighl-vuejs/js/app.40fc2ed5.js"
   },
   {
-    "revision": "75fb5f313b82f13c7e22",
-    "url": "/shighl-vuejs/js/chunk-58a5dc1f.82b8ba65.js"
+    "revision": "255b3ec73d00a827e234",
+    "url": "/shighl-vuejs/js/chunk-04bc4fee.61e731c8.js"
   },
   {
-    "revision": "4042962738257ce329d2",
-    "url": "/shighl-vuejs/js/chunk-71b6b9fa.d5746d1c.js"
+    "revision": "1bf4950f3dc46a2bef68",
+    "url": "/shighl-vuejs/js/chunk-0cd7e1c6.16d8a6d7.js"
   },
   {
-    "revision": "e1386c683dd64007d027",
-    "url": "/shighl-vuejs/js/chunk-72d8e0d7.da162ad3.js"
+    "revision": "e06de8ba1a93ab92478c",
+    "url": "/shighl-vuejs/js/chunk-2d7aed58.8d80ff18.js"
   },
   {
-    "revision": "8337efa29e6087440d58",
-    "url": "/shighl-vuejs/js/chunk-a20da704.478a9992.js"
+    "revision": "b4e495ee3fd06675fcdf",
+    "url": "/shighl-vuejs/js/chunk-650fa489.43d69c8a.js"
   },
   {
     "revision": "3691bd824cec85e575ed",
