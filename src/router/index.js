@@ -29,6 +29,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
+  name: 'router',
   mode: 'history',
   base: process.env.BASE_URL,
   routes
