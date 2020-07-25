@@ -23,6 +23,13 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+### TODO
+CHOICE :
+-https://joshuajohnson.co.uk/Choices/   
+-https://fr.vuejs.org/v2/cookbook/avoiding-memory-leaks.html
+
+
+
 # make a gh-pages branches
 https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
 
@@ -89,7 +96,7 @@ https://fr.vuejs.org/v2/guide/components-dynamic-async.html
 - https://youtu.be/b9XasJth5i0
 - https://www.youtube.com/watch?v=nNzszFdzxKk
 - https://www.youtube.com/watch?v=iz6ZqsFX9x4
-
+- https://www.youtube.com/watch?v=QhRPa7aG3eY
 
 # Palette
 ```

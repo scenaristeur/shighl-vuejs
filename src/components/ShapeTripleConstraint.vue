@@ -2,13 +2,14 @@
   <div class="triple-constraint">
 
     <div v-if="typeof valueExpr === 'string'" class="not-found">
-       <FormSelect :source="valueExpr"/>
+      <FormSelect :source="valueExpr"/>
     </div>
     <div v-else-if="typeof valueExpr === 'object'" class="found">
       <ExpressionSwitcher :expression="valueExpr" />
     </div>
     <div v-else class="not-found">TODO : typeof valueExpr unknown</div>
-
+    <span v-if="valueExpr.min">min : {{valueExpr.min}} </span>
+    <span v-if="valueExpr.max">max : {{valueExpr.max}}</span>
 
     <div class="brute-hide">
       <h5>{{ $options.name }}</h5>

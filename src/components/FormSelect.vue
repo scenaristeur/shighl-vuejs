@@ -2,8 +2,8 @@
   <div class="select">
 
     <div>
-     <b-form-select v-model="selected" :options="options"></b-form-select>
-
+      <b-form-select v-model="selected" :options="options"></b-form-select>
+      <b-button variant="secondary">New</b-button>
     </div>
     <div class="brute">
       <h5>{{ $options.name }}</h5>
@@ -48,11 +48,11 @@ export default {
   },
   watch : {
     values(vs){
-    console.log("VALUES CJ", vs)
-this.options =    [
-  { value: 'd', text: 'This one is disabled'}
+      console.log("VALUES CJ", vs)
+      this.options =    [
+        { value: 'd', text: 'This one is disabled'}
 
-  ]
+      ]
     }
   },
   computed: {

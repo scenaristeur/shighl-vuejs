@@ -21,13 +21,30 @@
         </li>
       </ul>
 
+      Solid Librairies used :
+      <ul>
+        <li>
+          solid-auth-client (Authetification)
+        </li>
+        <li>
+          solid-file-client (files & folders level)
+        </li>
+        <li>
+          tripledoc (document level)
+        </li>
+        <li>
+          @solid/query-ldflex (triple level)
+        </li>
+
+      </ul>
+
     </p>
 
-<!--
-<iframe allowtransparency="true" width="485" height="402" src="https://forum.solidproject.org/t/im-really-too-shexy-for-my-pod/2755/5" frameborder="0" allowfullscreen></iframe>
--->
+    <!--
+    <iframe allowtransparency="true" width="485" height="402" src="https://forum.solidproject.org/t/im-really-too-shexy-for-my-pod/2755/5" frameborder="0" allowfullscreen></iframe>
+  -->
 
-  </div>
+</div>
 </template>
 
 <style scoped>

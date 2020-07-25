@@ -5,6 +5,8 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    webId: null,
+    storage: "",
     count: 0,
     shape_url: "",
     schema: null,
@@ -14,6 +16,12 @@ export default new Vuex.Store({
     translate_shapes: []
   },
   mutations: {
+    webId (state, webId) {
+      state.webId = webId
+    },
+    storage (state, storage) {
+      state.storage = storage
+    },
     increment (state) {
       state.count++
     },
