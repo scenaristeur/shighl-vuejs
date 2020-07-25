@@ -3,7 +3,7 @@
 
     <FormExpression :expression="shape.expression" />
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
       Shape : {{ shape }}
       <DebugProperties :object="shape"/>

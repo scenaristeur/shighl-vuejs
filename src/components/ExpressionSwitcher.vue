@@ -1,6 +1,6 @@
 <template>
   <div class="switcher">
-      <div v-if="expression.type === 'EachOf'" class="found">
+    <div v-if="expression.type === 'EachOf'" class="found">
       <ShapeEachOf :expressions="expression.expressions"/>
     </div>
     <div v-else-if="expression.type === 'TripleConstraint'" class="found">
@@ -15,7 +15,7 @@
 
     <div v-else class="not-found">TODO {{ expression.type }}</div>
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
       Expression {{ expression }}
       <DebugProperties :object="expression"/>

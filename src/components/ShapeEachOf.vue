@@ -1,12 +1,13 @@
 <template>
   <div class="modele">
+    <p>You must fill each fields.</p>
     <ul  v-for="expression in expressions" :key="expression.predicate">
       <li>
         <FormField :expression="expression" />
       </li>
     </ul>
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
     </div>
 

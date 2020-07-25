@@ -1,10 +1,10 @@
 <template>
   <div class="modele">
 
-    <b-form-group label="Individual radios">
+    <b-form-group label="">
       <b-form-radio
       v-for="option in options"
-      :key="option.value"
+      :key="option.id"
       v-model="selected"
       name="some-radios"
       :value="option.value">
@@ -41,11 +41,12 @@
 <script>
 import store from '@/store'
 import ExpressionSwitcher from '@/components/ExpressionSwitcher.vue'
+import FormSelect from '@/components/FormSelect.vue'
 
 export default {
   name: 'FormRadio',
   components: {
-    ExpressionSwitcher
+    ExpressionSwitcher, FormSelect
   },
   props: {
     shapeExprs: Array,
@@ -60,10 +61,10 @@ export default {
   },
   computed: {
     options () {
-      let opts = [{text: "Option A", value:"A"}, {text:"Option B", value: "B"}]
+      let opts = []
       this.shapeExprs.forEach((se, i) => {
         console.log("se",se)
-        let o = {text:i, value: se}
+        let o = {id:i, text:i, value: se}
         opts.push(o)
       });
 

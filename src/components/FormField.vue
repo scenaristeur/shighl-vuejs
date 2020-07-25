@@ -4,7 +4,7 @@
 
     <ShapeTripleConstraint  :valueExpr="expression.valueExpr"/>
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
       {{ expression }}
     </div>

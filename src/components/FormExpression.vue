@@ -6,7 +6,7 @@
 
 
 
-    <div class="brute">
+    <div class="brute-hide">
       {{ $options.name }}<br>
       {{ expression }}
       <DebugProperties :object="expression"/>

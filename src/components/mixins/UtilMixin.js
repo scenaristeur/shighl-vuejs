@@ -14,6 +14,11 @@ export default {
         ln = uri.substr(uri.lastIndexOf("/")).substr(1)
       }
       return ln
-    }
+    },
+  today(){
+    var local = new Date();
+    local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+    return local.toJSON().slice(0,10);
+}
   }
 }

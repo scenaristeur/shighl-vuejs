@@ -1,13 +1,17 @@
 <template>
-  <div class="shape-or">
+  <div class="textarea">
 
-    <FormRadio :shapeExprs="valueExpr.shapeExprs"/>
+<b-textarea value="flow">BOO</b-textarea>
 
-    <div class="brute-hide">
+
+<!--
+    <b-input-group size="lg">
+      <b-form-input></b-form-input>
+    </b-input-group>
+-->
+    <div class="brute">
       <h5>{{ $options.name }}</h5>
-      TODO shapeExprs <br>
-      {{ valueExpr }}<br>
-      <DebugProperties :object="valueExpr" />
+      nodeKind : {{ nodeKind }}
     </div>
 
   </div>
@@ -15,17 +19,15 @@
 
 <script>
 import store from '@/store'
-import DebugProperties from '@/components/DebugProperties.vue'
-import FormRadio from '@/components/FormRadio.vue'
-
+//  import componentName from '@/components/componentName.vue'
 
 export default {
-  name: 'ShapeOr',
+  name: 'FormTextArea',
   components: {
-    DebugProperties, FormRadio
+    //  componentName
   },
   props: {
-    valueExpr: Object
+    nodeKind: String
   },
 
   data: function () {

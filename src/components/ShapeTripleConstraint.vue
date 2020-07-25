@@ -10,7 +10,7 @@
     <div v-else class="not-found">TODO : typeof valueExpr unknown</div>
 
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
       typeof valueExpr: {{ typeof valueExpr}}<br>
       {{ valueExpr }}

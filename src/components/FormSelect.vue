@@ -2,15 +2,17 @@
   <div class="select">
 
     <div>
-      <b-form-select v-model="selected" :options="options"></b-form-select>
+     <b-form-select v-model="selected" :options="options"></b-form-select>
 
     </div>
     <div class="brute">
       <h5>{{ $options.name }}</h5>
-      source : {{ source }}
+
       <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
-      options : {{ options }}
-      <hr>
+      source : {{ source }}<br>
+      options : {{ options }}<br>
+      values : {{ values}}
+      <!--          <DebugProperties :object="values" />-->
     </div>
 
   </div>
@@ -19,14 +21,17 @@
 <script>
 import store from '@/store'
 //  import componentName from '@/components/componentName.vue'
+import DebugProperties from '@/components/DebugProperties.vue'
+
 
 export default {
-  name: 'FormInput',
+  name: 'FormSelect',
   components: {
-    //  componentName
+    DebugProperties
   },
   props: {
-    source: String
+    source: String,
+    values: Array
   },
 
   data: function () {
@@ -39,6 +44,15 @@ export default {
         { value: { C: '3PO' }, text: 'This is an option with object value' },
         { value: 'd', text: 'This one is disabled', disabled: true }
       ]
+    }
+  },
+  watch : {
+    values(vs){
+    console.log("VALUES CJ", vs)
+this.options =    [
+  { value: 'd', text: 'This one is disabled'}
+
+  ]
     }
   },
   computed: {
