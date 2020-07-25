@@ -1,16 +1,17 @@
 <template>
   <div class="switcher">
+    PREDICATE EXPRESSIONSWITCHER {{ predicate }}
     <div v-if="expression.type === 'EachOf'" class="found">
-      <ShapeEachOf :expressions="expression.expressions"/>
+      <ShapeEachOf :expressions="expression.expressions" :predicate="predicate"/>
     </div>
     <div v-else-if="expression.type === 'TripleConstraint'" class="found">
-      <ShapeTripleConstraint :valueExpr="expression.valueExpr"/>
+      <ShapeTripleConstraint :valueExpr="expression.valueExpr" :predicate="predicate"/>
     </div>
     <div v-else-if="expression.type === 'NodeConstraint'" class="found">
-      <ShapeNodeConstraint :valueExpr="expression"/>
+      <ShapeNodeConstraint :valueExpr="expression" :predicate="predicate"/>
     </div>
     <div v-else-if="expression.type === 'ShapeOr'" class="found">
-      <ShapeOr :valueExpr="expression"/>
+      <ShapeOr :valueExpr="expression" :predicate="predicate"/>
     </div>
 
     <div v-else class="not-found">TODO {{ expression.type }}</div>
@@ -39,7 +40,8 @@ export default {
     ShapeNodeConstraint: () => import('@/components/ShapeNodeConstraint.vue')
   },
   props: {
-    expression: Object
+    expression: Object,
+    predicate: String
   },
   data: function () {
     return {

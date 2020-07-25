@@ -1,6 +1,6 @@
 <template>
   <div class="input">
-
+PREDICATE INPUT {{ predicate }}
 
     <div  v-if="type == 'webid'">
 
@@ -33,11 +33,12 @@ export default {
   name: 'FormInput',
 
   props: {
-    valueExpr: Object
+    valueExpr: Object,
+    predicate: String
   },
   methods: {
     updateValue (e) {
-      console.log(e)
+      console.log(e, this.currentShape, this.predicate)
       //this.$store.commit('updateValue', e.target.value)
     }
   },
@@ -85,7 +86,10 @@ export default {
         t = "text"
       }
       return t
-    }
+    },
+    currentShape () {
+      return this.$store.state.currentShape
+    },
   }
 }
 </script>

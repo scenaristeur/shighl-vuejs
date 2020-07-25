@@ -1,19 +1,19 @@
 <template>
   <div class="node-constraint">
-
+PREDICATE NODE CONSTRAINT {{ predicate }}
     <div v-if="valueExpr.values" class="not-found">
-     <FormSelect :values="valueExpr.values"/>
+     <FormSelect :values="valueExpr.values" :predicate="predicate"/>
     </div>
     <div v-else-if="valueExpr.nodeKind" class="found">
       <div v-if="valueExpr.nodeKind == 'literal'" class="not-found">
-        <FormTextarea :nodeKind="valueExpr.nodeKind" />
+        <FormTextarea :nodeKind="valueExpr.nodeKind" :predicate="predicate" />
       </div>
       <div v-else-if="valueExpr.nodeKind == 'iri'" class="not-found">
-        URI TODO:  <FormInput :valueExpr="valueExpr"/>
+        URI TODO:  <FormInput :valueExpr="valueExpr" :predicate="predicate"/>
       </div>
     </div>
     <div v-else class="not-found">
-     <FormInput :valueExpr="valueExpr"/>
+     <FormInput :valueExpr="valueExpr" :predicate="predicate"/>
     </div>
 
 
@@ -41,7 +41,8 @@ export default {
     DebugProperties, FormInput, FormSelect, FormTextarea
   },
   props: {
-    valueExpr: Object
+    valueExpr: Object,
+    predicate: String
   },
 
   data: function () {

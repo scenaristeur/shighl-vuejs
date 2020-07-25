@@ -1,6 +1,7 @@
 <template>
   <div class="select">
-
+PREDICATE SELECT: {{ predicate}}
+-
     <div>
       <b-form-select v-model="selected" :options="options"></b-form-select>
       <b-button variant="secondary">New</b-button>
@@ -31,7 +32,8 @@ export default {
   },
   props: {
     source: String,
-    values: Array
+    values: Array,
+    predicate: String
   },
 
   data: function () {

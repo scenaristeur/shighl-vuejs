@@ -12,21 +12,15 @@
 
       <div v-if="typeof option.value === 'string'" class="not-found">
         {{ option.value }}
-        <FormSelect :source="option.value"/>
+        <FormSelect :source="option.value" :predicate="predicate"/>
       </div>
       <div v-else-if="typeof option.value === 'object'" class="found">
-        <ExpressionSwitcher :expression="option.value" />
+        <ExpressionSwitcher :expression="option.value" :predicate="predicate"/>
       </div>
       <div v-else class="not-found">TODO : typeof option.value unknown</div>
 
-
-
-
-
     </b-form-radio>
   </b-form-group>
-
-
 
   <div class="brute">
     <h5>{{ $options.name }}</h5>
@@ -50,7 +44,8 @@ export default {
   },
   props: {
     shapeExprs: Array,
-    selected: String
+    selected: String,
+    predicate: String
   },
 
   data: function () {

@@ -1,11 +1,11 @@
 <template>
   <div class="triple-constraint">
-
+PREDICATE TRIPLECONSTRAINT {{ predicate }}
     <div v-if="typeof valueExpr === 'string'" class="not-found">
-      <FormSelect :source="valueExpr"/>
+      <FormSelect :source="valueExpr" :predicate="predicate"/>
     </div>
     <div v-else-if="typeof valueExpr === 'object'" class="found">
-      <ExpressionSwitcher :expression="valueExpr" />
+      <ExpressionSwitcher :expression="valueExpr" :predicate="predicate"/>
     </div>
     <div v-else class="not-found">TODO : typeof valueExpr unknown</div>
     <span v-if="valueExpr.min">min : {{valueExpr.min}} </span>
@@ -33,7 +33,8 @@ export default {
   props: {
     valueExpr:{
       type: [ String, Object ]
-    }
+    },
+    predicate: ""
   },
 
   data: function () {

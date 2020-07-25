@@ -1,7 +1,7 @@
 <template>
   <div class="shape-or">
-
-    <FormRadio :shapeExprs="valueExpr.shapeExprs"/>
+PREDICATE SHAPEOR {{ predicate }}
+    <FormRadio :shapeExprs="valueExpr.shapeExprs" :predicate="predicate"/>
 
     <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
@@ -25,7 +25,8 @@ export default {
     DebugProperties, FormRadio
   },
   props: {
-    valueExpr: Object
+    valueExpr: Object,
+    predicate: String
   },
 
   data: function () {

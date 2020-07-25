@@ -1,9 +1,10 @@
 <template>
   <div class="modele">
+    PREDICATE EACHOF {{predicate}}
     <p>You must fill each fields.</p>
     <div class="contanier-fluid">
       <div class="row"  v-for="expression in expressions" :key="expression.predicate">
-        <FormField :expression="expression" />
+        <FormField :expression="expression" :predicate="predicate"/>
       </div>
     </div>
 
@@ -22,7 +23,8 @@
   export default {
     name: 'ShapeEachOf',
     props: {
-      expressions: Array
+      expressions: Array,
+      predicate: String
     },
     components: {
       FormField

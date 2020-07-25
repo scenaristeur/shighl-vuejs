@@ -1,6 +1,6 @@
 <template>
   <div class="textarea">
-
+PREDICATE TEXTAREA {{ predicate  }}
 <b-textarea value="flow">BOO</b-textarea>
 
 
@@ -32,6 +32,7 @@ export default {
 
   data: function () {
     return {
+      predicate: String
       /*  currentShape: "",
       shapes: [],*/
     }
