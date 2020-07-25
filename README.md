@@ -36,7 +36,9 @@ git add dist -f && git commit -m "Initial dist subtree commit"
 - build & publish to gh-pages
 
 ```
-npm run build && git subtree push --prefix dist origin gh-pages
+npm run build && git add .
+git commit -m "my modif"
+git push && git subtree push --prefix dist origin gh-pages
 
 ```
 
