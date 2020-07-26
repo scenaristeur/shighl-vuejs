@@ -1,7 +1,6 @@
 <template>
   <div class="modele">
-    PREDICATE EACHOF {{predicate}}
-    <p>You must fill each fields.</p>
+  <p>You must fill each fields.</p>
     <div class="contanier-fluid">
       <div class="row"  v-for="expression in expressions" :key="expression.predicate">
         <FormField :expression="expression" :predicate="predicate"/>
@@ -37,10 +36,3 @@
     },
   }
   </script>
-
-  <style scoped>
-  .modele {
-    background-color: var(--celeste);
-  }
-
-  </style>

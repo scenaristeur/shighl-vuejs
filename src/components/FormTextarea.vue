@@ -1,38 +1,44 @@
 <template>
   <div class="textarea">
-PREDICATE TEXTAREA {{ predicate  }}
-<b-textarea value="flow" @change="updateValue">BOO</b-textarea>
+
+    <b-textarea value="" @change="updateValue"></b-textarea>
 
 
-<!--
+    <!--
     <b-input-group size="lg">
-      <b-form-input></b-form-input>
-    </b-input-group>
+    <b-form-input></b-form-input>
+  </b-input-group>
 -->
-    <div class="brute">
-      <h5>{{ $options.name }}</h5>
-      nodeKind : {{ nodeKind }}
-    </div>
+<div class="brute-hide">
+  <h5>{{ $options.name }}</h5>
+  nodeKind : {{ nodeKind }}<br>
+  datatype:   {{ datatype }}
+</div>
 
-  </div>
+</div>
 </template>
 
 <script>
 import store from '@/store'
+import FillingForm from './mixins/FillingForm.js'
+
 //  import componentName from '@/components/componentName.vue'
 
 export default {
   name: 'FormTextArea',
+  mixins: [FillingForm],
   components: {
     //  componentName
   },
   props: {
-    nodeKind: String
+    nodeKind: String,
+    predicate: String,
+    datatype: String,
   },
 
   data: function () {
     return {
-      predicate: String
+      //predicate: String
       /*  currentShape: "",
       shapes: [],*/
     }
@@ -43,18 +49,13 @@ export default {
     }
   },
   methods: {
-    updateValue (e) {
-      console.log(e, this.currentShape, this.predicate)
+    updateValue (value) {
+      console.log(value, this.currentShape, this.predicate)
+      let data = {shape: this.currentShape, predicate: this.predicate, value: value, datatype: this.datatype}
+      store.commit('local/fillForm', data)
+      //  this.fill(this.currentShape, this.predicate, value, this.datatype)
       //this.$store.commit('updateValue', e.target.value)
     }
   },
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

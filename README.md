@@ -6,6 +6,28 @@ https://vuex.vuejs.org/guide/modules.html
 Vuex modules for namespaces and registration for nested modules .
 https://vuex.vuejs.org/guide/plugins.html
 
+# make a gh-pages branches
+https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
+
+create subbranch with dist folder
+- comment the dist folder in the .gitignore file
+
+```
+git add dist -f && git commit -m "Initial dist subtree commit"
+```
+
+- build & publish to gh-pages
+
+```
+npm run build && git add .
+git commit -m "my modif"
+git push && git subtree push --prefix dist origin gh-pages
+
+```
+
+
+
+
 ## Project setup
 ```
 npm install
@@ -36,24 +58,7 @@ CHOICE :
 
 
 
-# make a gh-pages branches
-https://stackoverflow.com/questions/36782467/set-subdirectory-as-website-root-on-github-pages
 
-create subbranch with dist folder
-- comment the dist folder in the .gitignore file
-
-```
-git add dist -f && git commit -m "Initial dist subtree commit"
-```
-
-- build & publish to gh-pages
-
-```
-npm run build && git add .
-git commit -m "my modif"
-git push && git subtree push --prefix dist origin gh-pages
-
-```
 
 # ckeditor
 https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/vuejs.html
@@ -98,7 +103,8 @@ Async comp
 https://blog.logrocket.com/how-async-components-can-optimize-performance-in-vue-apps/
 https://fr.vuejs.org/v2/guide/components-dynamic-async.html
 
-# GTTD (GOOD TRACKS to Dev)  
+# GTTD (GOOD TRACKS to Dev)
+- https://www.youtube.com/c/eminem/playlists 
 - https://youtu.be/b9XasJth5i0
 - https://www.youtube.com/watch?v=nNzszFdzxKk
 - https://www.youtube.com/watch?v=iz6ZqsFX9x4

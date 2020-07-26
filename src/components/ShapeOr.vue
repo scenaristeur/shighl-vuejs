@@ -1,6 +1,5 @@
 <template>
   <div class="shape-or">
-PREDICATE SHAPEOR {{ predicate }}
     <FormRadio :shapeExprs="valueExpr.shapeExprs" :predicate="predicate"/>
 
     <div class="brute-hide">
@@ -42,11 +41,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

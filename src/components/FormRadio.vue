@@ -22,7 +22,7 @@
     </b-form-radio>
   </b-form-group>
 
-  <div class="brute">
+  <div class="brute-hide">
     <h5>{{ $options.name }}</h5>
     <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
     shapeExprs: {{ shapeExprs }}
@@ -68,11 +68,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

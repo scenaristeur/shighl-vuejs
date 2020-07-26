@@ -1,12 +1,8 @@
 <template>
   <div class="solid-login">
-    <h5>{{ $options.name }}</h5>
-    <!-- <componentName :attribut="property"/> -->
-
-
     <b-button variant="success" v-if="logged==false" @click="login">Login</b-button>
     <b-button variant="danger" v-else @click="logout">Logout</b-button>
-    <div class="brute">
+    <div class="brute-hide">
       logged : {{ logged }}<br>
       webId : {{ webId }}<br>
       storage: {{ storage}}
@@ -62,7 +58,7 @@ export default {
         let st  = await solid.data[session.webId].storage
         this.storage = `${st}`
         console.log(this.storage)
-        store.commit('local/setStorage', st)
+        store.commit('local/setStorage', this.storage)
         /*  console.log("STORAGE",`${solid.data.user.storage}`)
         let st = `${solid.data.user.storage}`
         console.log("STORAGE",st)

@@ -1,6 +1,5 @@
 <template>
   <div class="triple-constraint">
-PREDICATE TRIPLECONSTRAINT {{ predicate }}
     <div v-if="typeof valueExpr === 'string'" class="not-found">
       <FormSelect :source="valueExpr" :predicate="predicate"/>
     </div>
@@ -50,12 +49,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-  border-color: black;
-  border-width: 2px;
-}
-
-</style>

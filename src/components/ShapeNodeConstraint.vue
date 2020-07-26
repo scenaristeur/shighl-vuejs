@@ -1,24 +1,23 @@
 <template>
   <div class="node-constraint">
-PREDICATE NODE CONSTRAINT {{ predicate }}
     <div v-if="valueExpr.values" class="not-found">
-     <FormSelect :values="valueExpr.values" :predicate="predicate"/>
+     <FormSelect :values="valueExpr.values" :predicate="predicate" :datatype="valueExpr.datatype"/>
     </div>
     <div v-else-if="valueExpr.nodeKind" class="found">
       <div v-if="valueExpr.nodeKind == 'literal'" class="not-found">
-        <FormTextarea :nodeKind="valueExpr.nodeKind" :predicate="predicate" />
+        <FormTextarea :nodeKind="valueExpr.nodeKind" :predicate="predicate"/>
       </div>
       <div v-else-if="valueExpr.nodeKind == 'iri'" class="not-found">
-        URI TODO:  <FormInput :valueExpr="valueExpr" :predicate="predicate"/>
+        URI TODO:  <FormInput :valueExpr="valueExpr" :predicate="predicate" :datatype="valueExpr.datatype"/>
       </div>
     </div>
     <div v-else class="not-found">
-     <FormInput :valueExpr="valueExpr" :predicate="predicate"/>
+     <FormInput :valueExpr="valueExpr" :predicate="predicate" :datatype="valueExpr.datatype"/>
     </div>
 
 
 
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
       TODO : values, nodeKind, datatype
       {{ valueExpr }}<br>
@@ -58,11 +57,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

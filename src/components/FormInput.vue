@@ -1,11 +1,9 @@
 <template>
   <div class="input">
-PREDICATE INPUT {{ predicate }}
-
     <div  v-if="type == 'webid'">
 
       <b-input-group prepend="webid" class="mt-3">
-        <b-form-input :value="value" @input="updateValue"></b-form-input>
+        <b-form-input :value="value" @change="updateValue"></b-form-input>
         <b-input-group-append>
           <b-button variant="outline-success">Me</b-button>
           <b-button variant="info">Friends</b-button>
@@ -19,7 +17,9 @@ PREDICATE INPUT {{ predicate }}
 
     <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
-      valueExpr : {{ valueExpr }}
+      valueExpr : {{ valueExpr }}<br>
+      datatype : {{ datatype }}<br>
+      currentData: {{ currentData}}
     </div>
 
   </div>
@@ -27,18 +27,24 @@ PREDICATE INPUT {{ predicate }}
 
 <script>
 import store from '@/store'
+import FillingForm from './mixins/FillingForm.js'
 //  import componentName from '@/components/componentName.vue'
 
 export default {
   name: 'FormInput',
+  mixins: [FillingForm],
 
   props: {
     valueExpr: Object,
-    predicate: String
+    predicate: String,
+    datatype: String
   },
   methods: {
-    updateValue (e) {
-      console.log(e, this.currentShape, this.predicate)
+    updateValue (value) {
+      console.log(value, this.currentShape, this.predicate)
+      let data = {shape: this.currentShape, predicate: this.predicate, value: value, datatype: this.datatype}
+      store.commit('local/fillForm', data)
+      //  this.fill(this.currentShape, this.predicate, value, this.datatype)
       //this.$store.commit('updateValue', e.target.value)
     }
   },
@@ -70,6 +76,8 @@ export default {
         var local = new Date();
         local.setMinutes(local.getMinutes() - local.getTimezoneOffset());
         this.value =local.toJSON().slice(0,10);
+        let data = {shape: this.currentShape, predicate: this.predicate, value: this.value, datatype: this.datatype}
+        store.commit('local/fillForm', data)
         break;
         case "http://www.w3.org/2001/XMLSchema#string":
         t = "text"
@@ -90,14 +98,9 @@ export default {
     currentShape () {
       return this.$store.state.local.currentShape
     },
+    currentData () { // doesnot update ??
+      return this.$store.state.local.formData
+    },
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

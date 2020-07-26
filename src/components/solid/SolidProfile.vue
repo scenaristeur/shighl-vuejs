@@ -5,7 +5,7 @@
 
     attribut : {{ attribut }}
 
-    <div class="brute">
+    <div class="brute-hide">
 
       <hr>
     </div>

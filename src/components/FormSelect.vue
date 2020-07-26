@@ -1,18 +1,18 @@
 <template>
   <div class="select">
-PREDICATE SELECT: {{ predicate}}
--
+
     <div>
       <b-form-select v-model="selected" :options="options" @change='updateValue'></b-form-select>
       <b-button variant="secondary">New</b-button>
     </div>
-    <div class="brute">
+    <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
 
       <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
       source : {{ source }}<br>
       options : {{ options }}<br>
-      values : {{ values}}
+      values : {{ values}}<br>
+      datatype :   {{ datatype }}
       <!--          <DebugProperties :object="values" />-->
     </div>
 
@@ -21,19 +21,22 @@ PREDICATE SELECT: {{ predicate}}
 
 <script>
 import store from '@/store'
+import FillingForm from './mixins/FillingForm.js'
 //  import componentName from '@/components/componentName.vue'
 import DebugProperties from '@/components/DebugProperties.vue'
 
 
 export default {
   name: 'FormSelect',
+    mixins: [FillingForm],
   components: {
     DebugProperties
   },
   props: {
     source: String,
     values: Array,
-    predicate: String
+    predicate: String,
+    datatype: String
   },
 
   data: function () {
@@ -63,18 +66,11 @@ export default {
     }
   },
   methods: {
-    updateValue (e) {
-      console.log(e, this.currentShape, this.predicate)
+    updateValue (value) {
+      console.log(value, this.currentShape, this.predicate)
+      this.fill(this.currentShape, this.predicate, value, "selectForm")
       //this.$store.commit('updateValue', e.target.value)
     }
   },
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

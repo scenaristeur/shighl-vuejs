@@ -1,16 +1,15 @@
 <template>
   <div class="switcher">
-    PREDICATE EXPRESSIONSWITCHER {{ predicate }}
-    <div v-if="expression.type === 'EachOf'" class="found">
+    <div v-if="expression.type === 'EachOf'">
       <ShapeEachOf :expressions="expression.expressions" :predicate="predicate"/>
     </div>
-    <div v-else-if="expression.type === 'TripleConstraint'" class="found">
+    <div v-else-if="expression.type === 'TripleConstraint'">
       <ShapeTripleConstraint :valueExpr="expression.valueExpr" :predicate="predicate"/>
     </div>
-    <div v-else-if="expression.type === 'NodeConstraint'" class="found">
+    <div v-else-if="expression.type === 'NodeConstraint'">
       <ShapeNodeConstraint :valueExpr="expression" :predicate="predicate"/>
     </div>
-    <div v-else-if="expression.type === 'ShapeOr'" class="found">
+    <div v-else-if="expression.type === 'ShapeOr'">
       <ShapeOr :valueExpr="expression" :predicate="predicate"/>
     </div>
 
@@ -51,13 +50,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-.found {
-  background-color: var(--tea-green);
-}
-.not-found {
-  background-color: red;
-
-}
-</style>

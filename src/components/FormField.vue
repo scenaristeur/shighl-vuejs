@@ -37,12 +37,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-  border-color: black;
-  border-width: 2px;
-}
-
-</style>
