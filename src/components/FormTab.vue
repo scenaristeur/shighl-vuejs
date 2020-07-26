@@ -5,9 +5,9 @@
     <div>
       <b-tabs content-class="mt-3">
         <b-tab title="First" active><p>Select a Tab to use a Form</p>
-          <p>
+        <!--  <p>
             <b-button disabled>Toggle Debug</b-button>
-          </p>
+          </p>-->
 
           <div class="brute-hide">
             <h5>{{ $options.name }}</h5>

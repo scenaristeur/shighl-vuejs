@@ -44,6 +44,40 @@
     <iframe allowtransparency="true" width="485" height="402" src="https://forum.solidproject.org/t/im-really-too-shexy-for-my-pod/2755/5" frameborder="0" allowfullscreen></iframe>
   -->
 
+
+  <h1>{{ msg }}</h1>
+  <!--<ShexLoader />-->
+
+  To load a ShEx shape in your html page you will need to import the browserified
+  ShEx library modules (as i've not found how to import them in Vuejs component) : <br>
+  They can be found in the public/vendor/ folder of this repo or by installing with
+  <br>
+  <i>
+    npm install @shexjs/core @shexjs/loader<!-- @shexjs/parser -->
+  </i>
+  <br>
+  <br><!--
+  <a href="./examples/loadShape.html">LoadShape Demo</a> <br>
+  <a href="./examples/loadShape.html">LoadShape Code</a>-->
+
+  <div class="alert alert-secondary" role="alert">
+
+    <pre><code>
+
+      &lt;p&gt;Sample text here...&lt;/p&gt;
+      &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+
+      &lt;script src="./vendor/shex-core-browserify.min.js"&gt;&lt;/script&gt;
+      &lt;script src="./vendor/shex-loader-browserify.min.js"&gt;&lt;/script&gt;
+
+
+    </code></pre>
+  </div>
+  <!--  &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;-->
+
+
+
+
 </div>
 </template>
 

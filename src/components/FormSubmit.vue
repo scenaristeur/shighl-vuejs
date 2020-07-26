@@ -1,22 +1,27 @@
 <template>
   <div class="submit">
     <div class="mt-3">
-      CurrentShape : {{ currentShape}}<br>
-      WebId : {{ webId }}<br>
-      Storage: {{ storage }}<br>
+
 
       <b-button-group>
         <!--  <b-button variant="success" @click="save" disabled>Save on currentShape (footprint)</b-button>
-        <b-button variant="success" @click="save" disabled>Save on my POD</b-button>
+
         <b-button variant="info" disabled>Choose Where to save</b-button>-->
+
         <b-button variant="warning" @click="download">Download</b-button>
+        <b-button variant="info" @click="save">Stream that Activity</b-button>
+        <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) </b-button>
       </b-button-group>
     </div>
+    CurrentShape : {{ currentShape}}<br>
+    WebId : {{ webId }}<br>
+    Storage: {{ storage }}<br>
 
   </div>
 </template>
 
 <script>
+import auth from 'solid-auth-client';
 import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
 //  import componentName from '@/components/componentName.vue'
@@ -37,6 +42,10 @@ export default {
       shapes: [],*/
     }
   },
+  created(){
+    this.fc   = new SolidFileClient(auth)
+    console.log(this.fc)
+  },
   computed: {
     webId(){
       return this.$store.state.local.webId
@@ -54,13 +63,28 @@ export default {
       console.log("data", this.$store.state.local.formData)
       console.log(this.$store.state.local.formData[this.currentShape])
       let data = this.$store.state.local.formData[this.currentShape]
-      console.log("DATA TO CREATE", data)
+      //console.log("DATA TO CREATE", data)
+      let as = this.streamActtivity(this.webId, data)
+      console.log(as)
+      this.saveFile(as)
     },
-    download (){
-      //EXPORT https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+    async savePod(){
+      let data = this.$store.state.local.formData[this.currentShape]
+      console.log(this.fc)
+      console.log(this.storage)
+      let path = this.storage+"public/shighltest/test.text"
+      await this.fc.createFile(path, JSON.stringify(data), "text/plain").then(result => console.log(result))
+
+    },
+    download(){
       let data = this.$store.state.local.formData[this.currentShape]
       data['http://www.w3.org/1999/02/22-rdf-syntax-ns#type'] = this.currentShape
       console.log("DATA TO CREATE", data)
+      this.saveFile(data)
+    },
+    saveFile (data){
+      //EXPORT https://thiscouldbebetter.wordpress.com/2012/12/18/loading-editing-and-saving-a-text-file-in-html5-using-javascrip/
+
       let fileName= this.localname(this.currentShape)
       let extension = "json"
 
