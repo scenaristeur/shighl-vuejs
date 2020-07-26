@@ -1,0 +1,33 @@
+PREFIX :       <https://holacratie.solid.community/public/>
+PREFIX sx: <http://www.w3.org/ns/shex#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX hola: <https://holacratie.solid.community/public/>
+PREFIX fp: <https://footprint.solid.community/public/>
+PREFIX solid: <http://www.w3.org/ns/solid/terms#>
+
+START = hola:User
+
+hola:User {
+  schema:name          xsd:string  ;
+ # solid:webid          IRI;
+  schema:birthDate     xsd:date?  ;
+  schema:gender        [ "prefer not say" schema:Male schema:Female ];
+  # schema:knows         IRI @hola:User* ;
+}
+
+hola:User_Footprint {
+
+fp:root      [ <../User/solid:webid/> "current POD"]
+
+#( fp:root      [hola: "current POD" <../User> ] OR xsd:string ;
+#  fp:path      ["User"] OR xsd:string ;
+#  fp:filename  ["value of schema:name"] OR xsd:string;
+#  |  fp:fullpath xsd:string
+  ### |
+  ###  (   fp:root      ["POD" <../User> hola:]  |   fp:root LITERAL+    );
+  ###  (   fp:path      ["User"]                 |   fp:path LITERAL     );
+  ###  (   fp:filename  [schema:name];              |   fp:filename LITERAL );
+ # );
+}

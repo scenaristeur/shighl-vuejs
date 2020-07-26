@@ -73,7 +73,17 @@ export default {
       console.log(this.fc)
       console.log(this.storage)
       let path = this.storage+"public/shighltest/test.text"
-      await this.fc.createFile(path, JSON.stringify(data), "text/plain").then(result => console.log(result))
+      await this.fc.createFile(path, JSON.stringify(data), "text/plain")
+      .then(
+        result =>{
+          console.log(result)
+          console.log (result.url)
+          alert("Saved at "+result.url)
+        },err => {
+          console.log(err)
+          alert(err+ "Are you sure you are logged to your pod and you havae allowed thisapp to write on your pod ?")
+        }
+      )
 
     },
     download(){

@@ -44,35 +44,45 @@ export default {
   watch:{
     file(f){
       console.log(f)
+      const reader = new FileReader()
+      reader.onload = this.handleFileLoad;
+      reader.readAsText(f)
 
 
 
-      window.shexLoader.load([f], [], [], []).then(loaded => {
-        if (loaded.schema){
-          console.log("LOADED",loaded.schema)
-          store.commit('local/increment')
+console.log("loaded")
 
-          console.log(store.state.local.count)
-          store.commit('local/setSchema',loaded.schema)
-          console.log(store.state.local.schema)
-          //app.schema = JSON.stringify(loaded.schema);
-        //  app.splitSchema(loaded.schema)
-        }
-      }, err => {
-        console.log("erreur ",err)
-        alert(err.message)
-        app.currentShape.id = err.message
-      }
-    );
-    console.log("loaded")
+}
+},
+methods: {
+  handleFileLoad(event){
+    console.log(event);
+    console.log(event.target.result)
+      window.shexLoader.load([event.target.result], [], [], []).then(loaded => {
+    if (loaded.schema){
+    console.log("LOADED",loaded.schema)
+  //  store.commit('local/increment')
 
-    }
-  },
-  computed: {
-    currentShape () {
-      return this.$store.state.local.currentShape
-    }
+  //  console.log(store.state.local.count)
+  //  store.commit('local/setSchema',loaded.schema)
+    //console.log(store.state.local.schema)
+    //app.schema = JSON.stringify(loaded.schema);
+    //  app.splitSchema(loaded.schema)
   }
+}, err => {
+console.log("erreur ",err)
+alert(err.message)
+
+}
+);
+    //  document.getElementById('fileContent').textContent = event.target.result;
+  }
+},
+computed: {
+  currentShape () {
+    return this.$store.state.local.currentShape
+  }
+}
 }
 </script>
 

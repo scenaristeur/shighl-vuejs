@@ -1,51 +1,20 @@
 <template>
   <div class="modele">
-    <h5>{{ $options.name }}</h5>
-    <!-- <componentName :attribut="property"/> -->
-
-    attribut : {{ attribut }}
-<ShapeUpload />
-    <div class="brute-hide">
-
-      <hr>
-    </div>
-
+<!--<ShapeUpload />-->
+<ShapeRemoteLoader />
   </div>
 </template>
 
 <script>
 import store from '@/store'
-import ShapeUpload from '@/components/ShapeUpload.vue'
-//  import componentName from '@/components/componentName.vue'
+// wainting for https://github.com/scenaristeur/shighl-vuejs/projects/1#card-42549729
+//import ShapeUpload from '@/components/ShapeUpload.vue'
+import ShapeRemoteLoader from '@/components/ShapeRemoteLoader.vue'
 
 export default {
   name: 'ShapeChoose',
   components: {
-    ShapeUpload
-    //  componentName
+  /*  ShapeUpload,*/ ShapeRemoteLoader
   },
-  props: {
-    attribut: String
-  },
-
-  data: function () {
-    return {
-      /*  currentShape: "",
-      shapes: [],*/
-    }
-  },
-  computed: {
-    currentShape () {
-      return this.$store.state.local.currentShape
-    }
-  }
 }
 </script>
-
-<style scoped>
-.modele {
-  background-color: var(--celeste);
-
-}
-
-</style>

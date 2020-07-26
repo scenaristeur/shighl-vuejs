@@ -2,8 +2,9 @@
   <div class="select">
 
     <div>
-      <b-form-select v-model="selected" :options="options" @change='updateValue'></b-form-select>
-      <b-button variant="secondary">New</b-button>
+      [ not implemented yet see "Contribute menu" ;-)]
+      <b-form-select disabled v-model="selected" :options="options" @change='updateValue'></b-form-select>
+      <b-button variant="secondary" disabled>New</b-button>
     </div>
     <div class="brute-hide">
       <h5>{{ $options.name }}</h5>
