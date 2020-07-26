@@ -1,30 +1,30 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5df9eb4e14175b3f38dd",
-    "url": "/shighl-vuejs/css/about.e2424bb7.css"
+    "revision": "b599b958aec45534b936",
+    "url": "/shighl-vuejs/css/about.1921c741.css"
   },
   {
-    "revision": "aba3573b9b15fa6b303e",
-    "url": "/shighl-vuejs/css/app.3b747ab7.css"
+    "revision": "e8674c9f0d60554edda0",
+    "url": "/shighl-vuejs/css/app.5c9bdb79.css"
   },
   {
-    "revision": "255b3ec73d00a827e234",
-    "url": "/shighl-vuejs/css/chunk-04bc4fee.573d1d7a.css"
+    "revision": "2eb546e0b7d86ceebf7e",
+    "url": "/shighl-vuejs/css/chunk-2020307c.239d0873.css"
   },
   {
-    "revision": "1bf4950f3dc46a2bef68",
-    "url": "/shighl-vuejs/css/chunk-0cd7e1c6.f5484035.css"
+    "revision": "cb50363cb03253edb95e",
+    "url": "/shighl-vuejs/css/chunk-7d6fb712.e9d77918.css"
   },
   {
-    "revision": "e06de8ba1a93ab92478c",
-    "url": "/shighl-vuejs/css/chunk-2d7aed58.5c867e60.css"
+    "revision": "27251332f6611d168c95",
+    "url": "/shighl-vuejs/css/chunk-8adc14e8.3e474ba4.css"
   },
   {
-    "revision": "b4e495ee3fd06675fcdf",
-    "url": "/shighl-vuejs/css/chunk-650fa489.9ffe46e2.css"
+    "revision": "53751e8323b80a4b450d",
+    "url": "/shighl-vuejs/css/chunk-b4e3ce64.7e42b7ad.css"
   },
   {
-    "revision": "3691bd824cec85e575ed",
+    "revision": "5a58cd9a4909e0e7adf9",
     "url": "/shighl-vuejs/css/chunk-vendors.cbc2a074.css"
   },
   {
@@ -36,36 +36,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "f55e69e8f3df335835ebc9382c7b2673",
+    "revision": "81b52cbc13ff570e4e84210192b20402",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "5df9eb4e14175b3f38dd",
-    "url": "/shighl-vuejs/js/about.dbacf890.js"
+    "revision": "b599b958aec45534b936",
+    "url": "/shighl-vuejs/js/about.d89e1e8e.js"
   },
   {
-    "revision": "aba3573b9b15fa6b303e",
-    "url": "/shighl-vuejs/js/app.40fc2ed5.js"
+    "revision": "e8674c9f0d60554edda0",
+    "url": "/shighl-vuejs/js/app.cf8ba1e2.js"
   },
   {
-    "revision": "255b3ec73d00a827e234",
-    "url": "/shighl-vuejs/js/chunk-04bc4fee.61e731c8.js"
+    "revision": "2eb546e0b7d86ceebf7e",
+    "url": "/shighl-vuejs/js/chunk-2020307c.b3f7d58b.js"
   },
   {
-    "revision": "1bf4950f3dc46a2bef68",
-    "url": "/shighl-vuejs/js/chunk-0cd7e1c6.16d8a6d7.js"
+    "revision": "cb50363cb03253edb95e",
+    "url": "/shighl-vuejs/js/chunk-7d6fb712.795da058.js"
   },
   {
-    "revision": "e06de8ba1a93ab92478c",
-    "url": "/shighl-vuejs/js/chunk-2d7aed58.8d80ff18.js"
+    "revision": "27251332f6611d168c95",
+    "url": "/shighl-vuejs/js/chunk-8adc14e8.9a6288a6.js"
   },
   {
-    "revision": "b4e495ee3fd06675fcdf",
-    "url": "/shighl-vuejs/js/chunk-650fa489.43d69c8a.js"
+    "revision": "53751e8323b80a4b450d",
+    "url": "/shighl-vuejs/js/chunk-b4e3ce64.fce13ce2.js"
   },
   {
-    "revision": "3691bd824cec85e575ed",
-    "url": "/shighl-vuejs/js/chunk-vendors.0bddd264.js"
+    "revision": "5a58cd9a4909e0e7adf9",
+    "url": "/shighl-vuejs/js/chunk-vendors.9b01518b.js"
   },
   {
     "revision": "7fa297282b8c267a3aec12d403b96aa4",
