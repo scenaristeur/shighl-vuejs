@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3311d21329bdeab0b1ec",
-    "url": "/shighl-vuejs/css/about.ab2b7344.css"
+    "revision": "8ba44da276d0fbb747e8",
+    "url": "/shighl-vuejs/css/about.8b39a9c6.css"
   },
   {
-    "revision": "5656bca349274f0b6552",
+    "revision": "e44ee0932d051edf4b95",
     "url": "/shighl-vuejs/css/app.5c9bdb79.css"
   },
   {
@@ -16,16 +16,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "fe12e79ec5df9aa52dab930893d81813",
+    "revision": "f5a80daf5104b628b897b77e2862e5c5",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "3311d21329bdeab0b1ec",
-    "url": "/shighl-vuejs/js/about.bcc05943.js"
+    "revision": "8ba44da276d0fbb747e8",
+    "url": "/shighl-vuejs/js/about.1bdbb33c.js"
   },
   {
-    "revision": "5656bca349274f0b6552",
-    "url": "/shighl-vuejs/js/app.2fa1df6f.js"
+    "revision": "e44ee0932d051edf4b95",
+    "url": "/shighl-vuejs/js/app.065a3568.js"
   },
   {
     "revision": "0224fa7c3ebfeb13402c",

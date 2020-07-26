@@ -8,7 +8,7 @@
     <button v-else @click="login()">Log In</button>
   </div>
 </SolidLogin>-->
-<SolidLogin />
+<SolidLogin /><ShapeChoose />
 currentShape : {{ currentShape.id }}<br>
 <FormTab />
 
@@ -28,6 +28,7 @@ import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
 import FormTab from '@/components/FormTab.vue'
 import SolidLogin from '@/components/solid/SolidLogin.vue'
+import ShapeChoose from '@/components/ShapeChoose.vue'
 
 
 export default {
@@ -35,7 +36,7 @@ export default {
 
   mixins: [UtilMixin],
   components: {
-    FormTab, SolidLogin
+    FormTab, SolidLogin, ShapeChoose
   },
   data: function () {
     return {

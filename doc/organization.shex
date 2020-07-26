@@ -1,0 +1,35 @@
+import <https://holacratie.solid.community/public/Schema/user.shex>
+
+PREFIX :       <https://holacratie.solid.community/public/>
+PREFIX sx:     <http://www.w3.org/ns/shex#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd:    <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX hola:   <https://holacratie.solid.community/public/>
+PREFIX fp:     <https://footprint.solid.community/public/>
+PREFIX solid:  <http://www.w3.org/ns/solid/terms#>
+
+start = hola:Organization
+
+hola:Organization {               # An Organization has:
+  schema:name                    xsd:string  ;
+  schema:purpose_raison_d_etre   literal;
+  schema:creator                 solid:webid
+                              OR @hola:User ;
+  schema:dateCreated             xsd:date?  ;
+
+}
+
+hola:Organization_Footprint {
+
+fp:root      [ <../Organization> "current POD"];
+#( fp:root      [hola: "current POD" <../Organization> ] OR xsd:string ;
+ # fp:path      ["Organization"] OR xsd:string ;
+ # fp:filename  ["value of schema:name"] OR xsd:string;
+ # |  fp:fullpath xsd:string
+  ### |
+  ###  (   fp:root      ["POD" <../Organization> hola:]  |   fp:root LITERAL+    );
+  ###  (   fp:path      ["Organization"]                 |   fp:path LITERAL     );
+  ###  (   fp:filename  [schema:name];              |   fp:filename LITERAL );
+ # );
+}

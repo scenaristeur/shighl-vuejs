@@ -10,7 +10,7 @@
 
         <b-button variant="warning" @click="download">Download</b-button>
         <b-button variant="info" @click="save">Stream that Activity</b-button>
-        <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) </b-button>
+        <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) Add me to your trusted apps</b-button>
       </b-button-group>
     </div>
     CurrentShape : {{ currentShape}}<br>
