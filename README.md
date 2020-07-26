@@ -1,5 +1,11 @@
 # shighl-vuejs
 
+# Special notes
+- module in Vuex sounds cool to represent a temporary POD storage instead duplication of the Vuejs/vuex store in a pod (store interacting with a pod, solid-rest or whatelse ?)
+https://vuex.vuejs.org/guide/modules.html
+Vuex modules for namespaces and registration for nested modules .
+https://vuex.vuejs.org/guide/plugins.html
+
 ## Project setup
 ```
 npm install
@@ -97,6 +103,7 @@ https://fr.vuejs.org/v2/guide/components-dynamic-async.html
 - https://www.youtube.com/watch?v=nNzszFdzxKk
 - https://www.youtube.com/watch?v=iz6ZqsFX9x4
 - https://www.youtube.com/watch?v=QhRPa7aG3eY
+- https://www.youtube.com/watch?v=KJt-FM46eec
 
 # Palette
 ```

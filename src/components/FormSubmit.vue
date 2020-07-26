@@ -3,7 +3,8 @@
     <div class="mt-3">
       CurrentShape : {{ currentShape}}<br>
       WebId : {{ webId }}<br>
-      Storage: {{ storage }}
+      Storage: {{ storage }}<br>
+      STORAGE FROM POD : {{ storagePOD }}
       <b-button-group>
         <b-button variant="success" @click="save">Save on currentShape (footprint)</b-button>
         <b-button variant="success" @click="save">Save on my POD</b-button>
@@ -17,6 +18,7 @@
 
 <script>
 import store from '@/store'
+
 //  import componentName from '@/components/componentName.vue'
 
 export default {
@@ -44,10 +46,17 @@ export default {
     storage () {
       return this.$store.state.storage
     },
+    storagePOD () {
+      return pod.state.storage
+    },
   },
   methods: {
     save() {
       console.log("CurrentShape",this.currentShape)
+        pod.commit('changeOrAdd', this.currentShape, "Boo")
+        pod.commit('changeOrAdd', "ba", "BoMPMo")
+        console.log(pod.state.data)
+        console.log(pod.state.data.ba)
     }
   }
 }

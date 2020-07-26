@@ -51,7 +51,8 @@ export default {
         this.webId = null
         console.log('The user is not logged in', this.logged, this.webId)
         store.commit('webId', this.webId)
-
+        pod.commit('webId', this.webId)
+          pod.commit('storage', "")
       }
 
       else{
@@ -59,10 +60,12 @@ export default {
         this.webId = session.webId
         console.log(`The user is ${session.webId}`)
         store.commit('webId', this.webId)
+        pod.commit('webId', this.webId)
         let st  = await solid.data[session.webId].storage
         this.storage = `${st}`
         console.log(this.storage)
         store.commit('storage', st)
+          pod.commit('storage', st)
         /*  console.log("STORAGE",`${solid.data.user.storage}`)
         let st = `${solid.data.user.storage}`
         console.log("STORAGE",st)

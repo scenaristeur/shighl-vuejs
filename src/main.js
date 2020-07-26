@@ -13,6 +13,9 @@ Vue.use(IconsPlugin)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import { currency } from './currency'
+
+Vue.filter('currency', currency)
 /*
 import {Solid, SolidLogin} from 'vue-solid-plugin';
 Vue.use(Solid);
@@ -29,6 +32,5 @@ Vue.config.productionTip = false
 new Vue({
   router,
   store,
-
   render: h => h(App)
 }).$mount('#app')

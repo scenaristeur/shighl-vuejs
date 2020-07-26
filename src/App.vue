@@ -3,9 +3,11 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/components">Shighl-Vuejs Components</router-link> |
-      <!--    <router-link to="/about">Shighl</router-link> |
-      <router-link to="/about">Shighl-Elements</router-link> |-->
-      <router-link to="/about">About</router-link>
+      <router-link to="/howto">How To</router-link> |
+      <a href ="https://github.com/scenaristeur/shighl-vuejs/projects/1?fullscreen=true" target="_blank">Contribute</a> |
+      <router-link to="/about">About</router-link>   |
+      <router-link to="/brouillon">Brouillon</router-link>   |
+      <router-link to="/?lang=fr">  [en]</router-link>
     </div>
     <div class="container">
       <router-view/>

@@ -1,51 +1,22 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import cart from './modules/cart'
+import products from './modules/products'
+import local from './modules/local'
+import pod from './modules/pod'
+//import createLogger from '../../../src/plugins/logger'
 
 Vue.use(Vuex)
 
+const debug = process.env.NODE_ENV !== 'production'
+
 export default new Vuex.Store({
-  state: {
-    webId: null,
-    storage: "",
-    count: 0,
-    shape_url: "",
-    schema: null,
-    currentShape: "",
-    shapes: [],
-    footprint_shapes: [],
-    translate_shapes: []
-  },
-  mutations: {
-    webId (state, webId) {
-      state.webId = webId
-    },
-    storage (state, storage) {
-      state.storage = storage
-    },
-    increment (state) {
-      state.count++
-    },
-    setShapeUrl (state, shape_url) {
-      state.shape_url = shape_url
-    },
-    setSchema (state, schema) {
-      state.schema = schema
-    },
-    setShapes (state, shapes) {
-      state.shapes = shapes
-    },
-    setFShapes (state, fshapes) {
-      state.footprint_shapes = fshapes
-    },
-    setTShapes (state, tshapes) {
-      state.translate_shapes = tshapes
-    },
-    setCurrentShape (state, shape) {
-      state.currentShape = shape
-    },
-  },
-  actions: {
-  },
   modules: {
-  }
+    cart,
+    products,
+    local,
+    pod
+  },
+  //strict: debug,
+  //plugins: debug ? [createLogger()] : []
 })

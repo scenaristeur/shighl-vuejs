@@ -1,55 +1,55 @@
 <template>
   <div class="load-shape">
-<!--
+    <!--
     <SolidLogin popupUri="/popup.html">
-      <div slot-scope="{ initializing, login, logout, loggedIn, webId }">
-          <button v-if="initializing">Loading...</button>
-          <button v-else-if="loggedIn" @click="logout()" :title="webId">Log out</button>
-          <button v-else @click="login()">Log In</button>
-      </div>
-  </SolidLogin>-->
-  <SolidLogin />
-    currentShape : {{ currentShape.id }}<br>
-    <FormTab />
-
-    <h1>{{ msg }}</h1>
-    <!--<ShexLoader />-->
-
-    To load a ShEx shape in your html page you will need to import the browserified
-    ShEx library modules (as i've not found how to import them in Vuejs component) : <br>
-    They can be found in the public/vendor/ folder of this repo or by installing with
-    <br>
-    <i>
-      npm install @shexjs/core @shexjs/loader<!-- @shexjs/parser -->
-    </i>
-    <br>
-    <br>
-    <a href="./examples/loadShape.html">LoadShape Demo</a> <br>
-    <a href="./examples/loadShape.html">LoadShape Code</a>
-
-    <div class="alert alert-secondary" role="alert">
-
-      <pre><code>
-
-        &lt;p&gt;Sample text here...&lt;/p&gt;
-        &lt;p&gt;And another line of sample text here...&lt;/p&gt;
-
-        &lt;script src="./vendor/shex-core-browserify.min.js"&gt;&lt;/script&gt;
-        &lt;script src="./vendor/shex-loader-browserify.min.js"&gt;&lt;/script&gt;
-
-
-      </code></pre>
-    </div>
-    <!--  &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;-->
-
-    <div class="brute-hide">
-      shape_url : {{ shape_url }}<br>
-      currentShape : {{ currentShape }}<br>
-
-    </div>
-
-
+    <div slot-scope="{ initializing, login, logout, loggedIn, webId }">
+    <button v-if="initializing">Loading...</button>
+    <button v-else-if="loggedIn" @click="logout()" :title="webId">Log out</button>
+    <button v-else @click="login()">Log In</button>
   </div>
+</SolidLogin>-->
+<SolidLogin />
+currentShape : {{ currentShape.id }}<br>
+<FormTab />
+
+<h1>{{ msg }}</h1>
+<!--<ShexLoader />-->
+
+To load a ShEx shape in your html page you will need to import the browserified
+ShEx library modules (as i've not found how to import them in Vuejs component) : <br>
+They can be found in the public/vendor/ folder of this repo or by installing with
+<br>
+<i>
+  npm install @shexjs/core @shexjs/loader<!-- @shexjs/parser -->
+</i>
+<br>
+<br>
+<a href="./examples/loadShape.html">LoadShape Demo</a> <br>
+<a href="./examples/loadShape.html">LoadShape Code</a>
+
+<div class="alert alert-secondary" role="alert">
+
+  <pre><code>
+
+    &lt;p&gt;Sample text here...&lt;/p&gt;
+    &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+
+    &lt;script src="./vendor/shex-core-browserify.min.js"&gt;&lt;/script&gt;
+    &lt;script src="./vendor/shex-loader-browserify.min.js"&gt;&lt;/script&gt;
+
+
+  </code></pre>
+</div>
+<!--  &lt;script src="./vendor/shex-parser-browserify.min.js"&gt;&lt;/script&gt;-->
+
+<div class="brute-hide">
+  shape_url : {{ shape_url }}<br>
+  currentShape : {{ currentShape }}<br>
+
+</div>
+
+
+</div>
 </template>
 
 
@@ -58,6 +58,7 @@ import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
 import FormTab from '@/components/FormTab.vue'
 import SolidLogin from '@/components/solid/SolidLogin.vue'
+console.log("STORE", store)
 
 export default {
   name: 'LoadShape',
