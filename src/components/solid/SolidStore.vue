@@ -70,20 +70,20 @@ export default {
 created(){
 
   this.$store.commit('pod/increment')
-     console.log(this.$store.state.pod.count)
+     console.log(this.$store.state.local.pod.count)
      this.$store.commit('pod/increment')
-        console.log(this.$store.state.pod.count)
+        console.log(this.$store.state.local.pod.count)
         this.$store.commit('pod/increment')
-           console.log(this.$store.state.pod.count)
+           console.log(this.$store.state.local.pod.count)
            this.$store.commit('pod/increment')
             this.$store.commit('pod/increment')
              this.$store.commit('pod/increment')
 
-              console.log(this.$store.state.pod.count)
+              console.log(this.$store.state.local.pod.count)
               this.$store.commit('pod/increment')
-                 console.log(this.$store.state.pod.count)
+                 console.log(this.$store.state.local.pod.count)
                  this.$store.commit('pod/increment')
-                    console.log(this.$store.state.pod.count)
+                    console.log(this.$store.state.local.pod.count)
 
 },*/
   data: function () {

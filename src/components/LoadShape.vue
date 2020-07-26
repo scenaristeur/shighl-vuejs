@@ -23,9 +23,9 @@ They can be found in the public/vendor/ folder of this repo or by installing wit
   npm install @shexjs/core @shexjs/loader<!-- @shexjs/parser -->
 </i>
 <br>
-<br>
+<br><!--
 <a href="./examples/loadShape.html">LoadShape Demo</a> <br>
-<a href="./examples/loadShape.html">LoadShape Code</a>
+<a href="./examples/loadShape.html">LoadShape Code</a>-->
 
 <div class="alert alert-secondary" role="alert">
 
@@ -94,8 +94,8 @@ export default {
   async mounted(){
     console.log("shexLoader", window.shexLoader)
     await this.load_schema( this.shape_url )
-    store.commit('setShapeUrl', this.shape_url)
-    console.log(store.state.shape_url)
+    store.commit('local/setShapeUrl', this.shape_url)
+    console.log(store.state.local.shape_url)
     console.log("fin load")
   },
   methods: {
@@ -108,11 +108,11 @@ export default {
       window.shexLoader.load([shape_url], [], [], []).then(loaded => {
         if (loaded.schema){
           console.log("LOADED",loaded.schema)
-          store.commit('increment')
+          store.commit('local/increment')
 
-          console.log(store.state.count)
-          store.commit('setSchema',loaded.schema)
-          console.log(store.state.schema)
+          console.log(store.state.local.count)
+          store.commit('local/setSchema',loaded.schema)
+          console.log(store.state.local.schema)
           //app.schema = JSON.stringify(loaded.schema);
           app.splitSchema(loaded.schema)
         }
@@ -146,7 +146,7 @@ export default {
       }
     });
     this.currentShape = this.shapes[0].id
-    store.commit('setCurrentShape', this.shapes[0].id)
+    store.commit('local/setCurrentShape', this.shapes[0].id)
     /*this.rootElement = document.getElementById(this.root)
     console.log("ROOT Element",this.rootElement)
     this.initRootElement()*/
@@ -157,9 +157,9 @@ export default {
   console.log("SHAPES",this.shapes)
   console.log("FOOTPRINT_SHAPES",this.footprint_shapes)
   console.log("TRANSLATE_SHAPES",this.translate_shapes)
-  store.commit('setShapes', this.shapes)
-  store.commit('setFShapes', this.footprint_shapes)
-  store.commit('setTShapes', this.translate_shapes)
+  store.commit('local/setShapes', this.shapes)
+  store.commit('local/setFShapes', this.footprint_shapes)
+  store.commit('local/setTShapes', this.translate_shapes)
 }
 
 }

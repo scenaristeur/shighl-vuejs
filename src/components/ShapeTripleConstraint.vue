@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     currentShape () {
-      return this.$store.state.currentShape
+      return this.$store.state.local.currentShape
     }
   }
 }

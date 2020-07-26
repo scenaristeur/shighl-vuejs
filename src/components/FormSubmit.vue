@@ -4,7 +4,7 @@
       CurrentShape : {{ currentShape}}<br>
       WebId : {{ webId }}<br>
       Storage: {{ storage }}<br>
-      STORAGE FROM POD : {{ storagePOD }}
+
       <b-button-group>
         <b-button variant="success" @click="save">Save on currentShape (footprint)</b-button>
         <b-button variant="success" @click="save">Save on my POD</b-button>
@@ -38,25 +38,19 @@ export default {
   },
   computed: {
     webId(){
-      return this.$store.state.webId
+      return this.$store.state.local.webId
     },
     currentShape () {
-      return this.$store.state.currentShape
+      return this.$store.state.local.currentShape
     },
     storage () {
-      return this.$store.state.storage
-    },
-    storagePOD () {
-      return pod.state.storage
+      return this.$store.state.local.storage
     },
   },
   methods: {
     save() {
       console.log("CurrentShape",this.currentShape)
-        pod.commit('changeOrAdd', this.currentShape, "Boo")
-        pod.commit('changeOrAdd', "ba", "BoMPMo")
-        console.log(pod.state.data)
-        console.log(pod.state.data.ba)
+
     }
   }
 }

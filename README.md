@@ -104,6 +104,7 @@ https://fr.vuejs.org/v2/guide/components-dynamic-async.html
 - https://www.youtube.com/watch?v=iz6ZqsFX9x4
 - https://www.youtube.com/watch?v=QhRPa7aG3eY
 - https://www.youtube.com/watch?v=KJt-FM46eec
+- https://www.youtube.com/watch?v=L2gZceGjDDk
 
 # Palette
 ```

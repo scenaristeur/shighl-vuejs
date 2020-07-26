@@ -54,22 +54,22 @@ export default {
   },
   computed: {
     currentShape () {
-      return this.$store.state.currentShape
+      return this.$store.state.local.currentShape
     },
     shapes () {
-      return this.$store.state.shapes
+      return this.$store.state.local.shapes
     },
     footprint_shapes () {
-      return this.$store.state.footprint_shapes
+      return this.$store.state.local.footprint_shapes
     },
     translate_shapes () {
-      return this.$store.state.translate_shapes
+      return this.$store.state.local.translate_shapes
     }
   },
   methods: {
     changeCurrentShape(shape){
       console.log(shape)
-      store.commit('setCurrentShape', shape)
+      store.commit('local/setCurrentShape', shape)
     }
   }
 }
