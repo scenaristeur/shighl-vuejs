@@ -35,6 +35,9 @@
         <li>
           @solid/query-ldflex (triple level)
         </li>
+        <li>
+          shexjs (load schema from shex)
+        </li>
 
       </ul>
 
@@ -43,10 +46,6 @@
     <!--
     <iframe allowtransparency="true" width="485" height="402" src="https://forum.solidproject.org/t/im-really-too-shexy-for-my-pod/2755/5" frameborder="0" allowfullscreen></iframe>
   -->
-
-
-  <h1>{{ msg }}</h1>
-  <!--<ShexLoader />-->
 
   To load a ShEx shape in your html page you will need to import the browserified
   ShEx library modules (as i've not found how to import them in Vuejs component) : <br>

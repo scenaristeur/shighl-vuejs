@@ -3,7 +3,7 @@
     <div>
       <b-input-group prepend="ShEx shape" class="mt-3">
         <b-form-input v-model="shape_url"
-        placeholder="https://holacratie.solid.community/public/Schema/user.shex"
+        placeholder="click on the suggestions button"
         ></b-form-input>
         <b-input-group-append>
           <b-button variant="outline-success" @click="load">Load</b-button>
@@ -24,7 +24,7 @@
     mixins: [ ShexMixin],
     data: function () {
       return {
-        shape_url: "https://holacratie.solid.community/public/Schema/user.shex"
+        shape_url: "https://holacratie.solid.community/public/Schema/circle.shex"
       }
     },
     methods: {

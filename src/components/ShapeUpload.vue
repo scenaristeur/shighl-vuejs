@@ -7,7 +7,7 @@
     v-model="file"
     accept=".shex"
     :state="Boolean(file)"
-    placeholder="Choose a file or drop it here..."
+    placeholder="Choose a shex file or drop it here..."
     drop-placeholder="Drop file here..."
     ></b-form-file>
 
