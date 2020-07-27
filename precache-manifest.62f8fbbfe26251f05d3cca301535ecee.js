@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d92c6abe0a56bf7b0e14",
-    "url": "/shighl-vuejs/css/about.a850c801.css"
+    "revision": "0159c139e4cca1137562",
+    "url": "/shighl-vuejs/css/about.7dd2934c.css"
   },
   {
-    "revision": "46c2e083491d1b0815f5",
+    "revision": "7e00c3bf314447e09c93",
     "url": "/shighl-vuejs/css/app.4fc632a5.css"
   },
   {
@@ -16,32 +16,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "ffb0f524e235216671c6462b262eba50",
+    "revision": "5ce430f519d906ca5b48eae114149112",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "d92c6abe0a56bf7b0e14",
-    "url": "/shighl-vuejs/js/about.9ddc1bbe.js"
+    "revision": "0159c139e4cca1137562",
+    "url": "/shighl-vuejs/js/about.0f5feec9.js"
   },
   {
-    "revision": "46c2e083491d1b0815f5",
-    "url": "/shighl-vuejs/js/app.2193907d.js"
+    "revision": "7e00c3bf314447e09c93",
+    "url": "/shighl-vuejs/js/app.f49eaaaf.js"
   },
   {
-    "revision": "a03765ed0c3c8a87f53a",
-    "url": "/shighl-vuejs/js/chunk-1741c46e.5c9594b9.js"
+    "revision": "c6ffd3c244dd6a92a84d",
+    "url": "/shighl-vuejs/js/chunk-41d01dc8.6f85d3b8.js"
   },
   {
-    "revision": "0768509a94b80cd52cb3",
-    "url": "/shighl-vuejs/js/chunk-3c66732d.ee4aed44.js"
+    "revision": "50ff2658d71366c7b007",
+    "url": "/shighl-vuejs/js/chunk-4f335db7.459a7d61.js"
   },
   {
-    "revision": "2baf3fab4518c249c68c",
-    "url": "/shighl-vuejs/js/chunk-9397529a.0568cdad.js"
+    "revision": "bcfd519a6fbeb957d1e7",
+    "url": "/shighl-vuejs/js/chunk-4f34e8d8.3d812fe8.js"
   },
   {
-    "revision": "086c7207cd3f2331d3a7",
-    "url": "/shighl-vuejs/js/chunk-f155d606.d44ef439.js"
+    "revision": "c54540c3e7d911e7ab00",
+    "url": "/shighl-vuejs/js/chunk-4f492a12.bb36be26.js"
   },
   {
     "revision": "dea710a76c773f6f69e8",
