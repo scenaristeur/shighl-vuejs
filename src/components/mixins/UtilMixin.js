@@ -20,7 +20,7 @@ export default {
       local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
       return local.toJSON().slice(0,10);
     },
-    streamActtivity(webId, data){
+    streamActivity(webId, data){
       let as =  {
         "@context": "https://www.w3.org/ns/activitystreams",
         "summary": "User fill a form with shighl-vuejs",

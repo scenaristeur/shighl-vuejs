@@ -1,5 +1,5 @@
 <template>
-  <div class="properties" >
+  <div class="debug-properties" >
 
 
     <ul  v-for="p in properties" :key="p.key" >

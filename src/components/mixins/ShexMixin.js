@@ -10,6 +10,7 @@ export default {
     async load_schema(shape_url){
       console.log("loading")
       let app = this
+      console.log(window.shexLoader)
       window.shexLoader.load([shape_url], [], [], []).then(loaded => {
         if (loaded.schema){
           console.log("LOADED",loaded.schema)

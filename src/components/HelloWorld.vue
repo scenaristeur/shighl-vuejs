@@ -1,5 +1,5 @@
 <template>
-  <div class="hello container">
+  <div class="hello-world container">
     <h1>{{ msg }}</h1>
     <p>
       The aim of this project is to take a tour of the tools to help you to build

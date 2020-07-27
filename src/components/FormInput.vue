@@ -1,5 +1,5 @@
 <template>
-  <div class="input">
+  <div class="form-input">
     <div  v-if="type == 'webid'">
 
       <b-input-group prepend="webid" class="mt-3">

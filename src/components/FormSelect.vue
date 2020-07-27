@@ -1,5 +1,5 @@
 <template>
-  <div class="select">
+  <div class="form-select">
 
     <div>
       [ not implemented yet see "Contribute menu" ;-)]

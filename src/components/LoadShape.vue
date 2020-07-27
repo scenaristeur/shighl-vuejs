@@ -8,8 +8,9 @@
     <button v-else @click="login()">Log In</button>
   </div>
 </SolidLogin>-->
-<SolidLogin /><ShapeChoose />
-currentShape : {{ currentShape.id }}<br>
+<SolidLogin />
+<ShapeChoose />
+<!--currentShape : {{ currentShape.id }}<br>-->
 <FormTab />
 
 <div class="brute-hide">
@@ -59,7 +60,7 @@ export default {
 
   async mounted(){
     console.log("shexLoader", window.shexLoader)
-    await this.load_schema( this.shape_url )
+    await this.load_schema( this.shape_url ) // see ShexMixin
     store.commit('local/setShapeUrl', this.shape_url)
     console.log(store.state.local.shape_url)
     console.log("fin load")

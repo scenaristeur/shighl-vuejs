@@ -1,5 +1,5 @@
 <template>
-  <div class="switcher">
+  <div class="expression-switcher">
     <div v-if="expression.type === 'EachOf'">
       <ShapeEachOf :expressions="expression.expressions" :predicate="predicate"/>
     </div>

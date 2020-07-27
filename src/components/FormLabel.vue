@@ -1,5 +1,5 @@
 <template>
-  <div class="label">
+  <div class="form-label">
     <h4 :title="text"><u> {{label}}</u></h4>
   </div>
 </template>

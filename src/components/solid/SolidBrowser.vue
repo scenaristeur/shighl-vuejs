@@ -1,5 +1,5 @@
 <template>
-  <div class="solid-login">
+  <div class="solid-browser">
     <h5>{{ $options.name }}</h5>
     <!-- <componentName :attribut="property"/> -->
 

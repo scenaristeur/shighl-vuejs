@@ -1,7 +1,7 @@
 <template>
-  <div class="modele">
+  <div class="shape-remote-loader mb-3">
     <div>
-      <b-input-group prepend="ShEx shape" class="mt-3">
+      <b-input-group  class="mt-3"> <!--prepend="ShEx shape"-->
         <b-form-input v-model="shape_url"
         placeholder="click on the suggestions button"
         ></b-form-input>

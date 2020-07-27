@@ -1,8 +1,8 @@
 <template>
-  <div class="submit">
+  <div class="form-submit">
     <div class="mt-3">
 
-
+       {{ message }}
       <b-button-group>
         <!--  <b-button variant="success" @click="save" disabled>Save on currentShape (footprint)</b-button>
 
@@ -11,11 +11,12 @@
         <b-button variant="warning" @click="download">Download</b-button>
         <b-button variant="info" @click="save">Stream that Activity</b-button>
         <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) Add me to your trusted apps</b-button>
+        <b-button variant="success" @click="savePublic">Save on holacratie Pod</b-button>
       </b-button-group>
     </div>
-    CurrentShape : {{ currentShape}}<br>
-    WebId : {{ webId }}<br>
-    Storage: {{ storage }}<br>
+    CurrentShape : <a :href="currentShape" target="blank">{{ currentShape}}</a><br>
+    WebId : <a :href="webId" target="blank">{{ webId }}</a><br>
+    Storage: <a :href="storage" target="blank">{{ storage }}</a><br>
 
   </div>
 </template>
@@ -24,11 +25,12 @@
 import auth from 'solid-auth-client';
 import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
+import TtlMixin from './mixins/TtlMixin.js'
 //  import componentName from '@/components/componentName.vue'
 
 export default {
   name: 'FormSubmit',
-  mixins: [UtilMixin],
+  mixins: [UtilMixin, TtlMixin],
   components: {
     //  componentName
   },
@@ -38,6 +40,7 @@ export default {
 
   data: function () {
     return {
+      message: "mm"
       /*  currentShape: "",
       shapes: [],*/
     }
@@ -64,24 +67,56 @@ export default {
       console.log(this.$store.state.local.formData[this.currentShape])
       let data = this.$store.state.local.formData[this.currentShape]
       //console.log("DATA TO CREATE", data)
-      let as = this.streamActtivity(this.webId, data)
+      let as = this.streamActivity(this.webId, data)
       console.log(as)
       this.saveFile(as)
+    },
+    async savePublic(){
+      let data = this.$store.state.local.formData[this.currentShape]
+      let ttlData = {form: data, shape: this.currentShape, author: this.webId}
+      let ttlFile = this.buildTtl(ttlData)
+      console.log("TTL",ttlFile)
+      let path = ttlFile.ttlData.shape+"/"+ttlFile.filename
+      console.log(path)
+      await this.fc.createFile(path, ttlFile.content, "text/turtle")
+      .then(
+        result =>{
+          console.log(result)
+          console.log (result.url)
+          this.message = new Date().toLocaleTimeString()+" : Saved at "+result.url
+          alert(this.message)
+        },err => {
+          console.log(err)
+          this.message = new Date().toLocaleTimeString()+" : "+ err+ " It seems there is an issue to store on Holocratie POD ?"
+          alert(this.message)
+        }
+      )
     },
     async savePod(){
       let data = this.$store.state.local.formData[this.currentShape]
       console.log(this.fc)
       console.log(this.storage)
-      let path = this.storage+"public/shighltest/test.text"
-      await this.fc.createFile(path, JSON.stringify(data), "text/plain")
+
+
+      /*  let path = this.storage+"public/shighltest/test.text"
+      await this.fc.createFile(path, JSON.stringify(data), "text/plain")*/
+
+      let ttlData = {form: data, shape: this.currentShape, author: this.webId}
+      let ttlFile = this.buildTtl(ttlData)
+      console.log("TTL",ttlFile)
+      let path = this.storage+"public/shighltest/"+this.localname(this.currentShape)+"/"+ttlFile.filename
+      console.log(path)
+      await this.fc.createFile(path, ttlFile.content, "text/turtle")
       .then(
         result =>{
           console.log(result)
           console.log (result.url)
-          alert("Saved at "+result.url)
+          this.message=new Date().toLocaleTimeString()+" : Saved at "+result.url
+          alert(this.message)
         },err => {
           console.log(err)
-          alert(err+ "Are you sure you are logged to your pod and you havae allowed thisapp to write on your pod ?")
+          this.message =new Date().toLocaleTimeString()+" : "+ err+ " Are you sure you are logged to your pod and you have allowed this app to write on ?"
+          alert(this.message)
         }
       )
 

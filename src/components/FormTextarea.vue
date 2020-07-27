@@ -1,5 +1,5 @@
 <template>
-  <div class="textarea">
+  <div class="form-textarea">
 
     <b-textarea value="" @change="updateValue"></b-textarea>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="node-constraint">
+  <div class="shape-node-constraint">
     <div v-if="valueExpr.values" class="not-found">
      <FormSelect :values="valueExpr.values" :predicate="predicate" :datatype="valueExpr.datatype"/>
     </div>

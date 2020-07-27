@@ -3,10 +3,8 @@
     <h5>{{ $options.name }}</h5>
     <!-- <componentName :attribut="property"/> -->
 
-    attribut : {{ attribut }}
-
-    <div class="brute-hide">
-
+    <div class="brute">
+      attribut : {{ attribut }}
       <hr>
     </div>
 
@@ -25,7 +23,6 @@ export default {
   props: {
     attribut: String
   },
-
   data: function () {
     return {
       /*  currentShape: "",
@@ -43,7 +40,5 @@ export default {
 <style scoped>
 .modele {
   background-color: var(--celeste);
-
 }
-
 </style>

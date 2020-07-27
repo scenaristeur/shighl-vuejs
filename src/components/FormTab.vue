@@ -1,5 +1,5 @@
 <template>
-  <div class="tab">
+  <div class="form-tab">
 
 
     <div>
@@ -22,9 +22,10 @@
         v-for="shape in shapes"
         :key="shape.id" :title="shape.localname"
         @click="changeCurrentShape(shape.id)">
-        <p>  <a :href="shape.id" target="_blank">{{ shape.id }}</a></p>
+
         <FormShape :shape="shape"/>
         <FormSubmit :shape="shape"/>
+    
       </b-tab>
     </b-tabs>
   </div>

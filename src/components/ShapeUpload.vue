@@ -1,5 +1,5 @@
 <template>
-  <div class="modele">
+  <div class="shape-upload">
     <h5>{{ $options.name }}</h5>
 
     <!-- Styled -->

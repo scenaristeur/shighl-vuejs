@@ -1,5 +1,5 @@
 <template>
-  <div class="triple-constraint">
+  <div class="shape-triple-constraint">
     <div v-if="typeof valueExpr === 'string'" class="not-found">
       <FormSelect :source="valueExpr" :predicate="predicate"/>
     </div>

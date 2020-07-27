@@ -1,6 +1,6 @@
 <template>
-  <div class="modele">
-  <p>You must fill each fields.</p>
+  <div class="shape-eachof">
+ICI {{ currentShape }}
     <div class="contanier-fluid">
       <div class="row"  v-for="expression in expressions" :key="expression.predicate">
         <FormField :expression="expression" :predicate="predicate"/>

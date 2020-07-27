@@ -1,12 +1,13 @@
 <template>
-  <div class="solid-profile">
+  <div class="shape-editor">
     <h5>{{ $options.name }}</h5>
     <!-- <componentName :attribut="property"/> -->
 
-    attribut : {{ attribut }}
+
+    <textarea value="shape editor"></textarea>
 
     <div class="brute-hide">
-
+      attribut : {{ attribut }}
       <hr>
     </div>
 
@@ -18,7 +19,7 @@ import store from '@/store'
 //  import componentName from '@/components/componentName.vue'
 
 export default {
-  name: 'SolidLogin',
+  name: 'ShapeEditor',
   components: {
     //  componentName
   },

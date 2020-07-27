@@ -1,5 +1,5 @@
 <template>
-  <div class="modele">
+  <div class="form-field">
     <h5>  <FormLabel :text="expression.predicate" /></h5>
 
     <ShapeTripleConstraint  :valueExpr="expression.valueExpr" :predicate="expression.predicate"/>

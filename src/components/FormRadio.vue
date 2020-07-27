@@ -1,5 +1,5 @@
 <template>
-  <div class="modele">
+  <div class="form-radio">
 
     <b-form-group label="">
       <b-form-radio

@@ -1,5 +1,5 @@
 <template>
-  <div class="shape">
+  <div class="form-shape">
 
     <FormExpression :expression="shape.expression" />
 
