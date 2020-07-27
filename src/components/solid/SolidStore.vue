@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import { mapState, mapActions } from 'vuex'
 //  import componentName from '@/components/componentName.vue'
 /*

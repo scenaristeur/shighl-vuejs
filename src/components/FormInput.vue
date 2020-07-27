@@ -26,14 +26,11 @@
 </template>
 
 <script>
-import store from '@/store'
-import FillingForm from './mixins/FillingForm.js'
+
 //  import componentName from '@/components/componentName.vue'
 
 export default {
   name: 'FormInput',
-  mixins: [FillingForm],
-
   props: {
     valueExpr: Object,
     predicate: String,
@@ -43,7 +40,7 @@ export default {
     updateValue (value) {
       console.log(value, this.currentShape, this.predicate)
       let data = {shape: this.currentShape, predicate: this.predicate, value: value, datatype: this.datatype}
-      store.commit('local/fillForm', data)
+      this.$store.commit('local/fillForm', data)
       //  this.fill(this.currentShape, this.predicate, value, this.datatype)
       //this.$store.commit('updateValue', e.target.value)
     }
@@ -77,7 +74,7 @@ export default {
         local.setMinutes(local.getMinutes() - local.getTimezoneOffset());
         this.value =local.toJSON().slice(0,10);
         let data = {shape: this.currentShape, predicate: this.predicate, value: this.value, datatype: this.datatype}
-        store.commit('local/fillForm', data)
+        this.$store.commit('local/fillForm', data)
         break;
         case "http://www.w3.org/2001/XMLSchema#string":
         t = "text"
@@ -90,7 +87,7 @@ export default {
         t = "webid"
         break;
         case "http://www.w3.org/2001/XMLSchema#dateTime":
-        t = "time"
+        t = "datetime-local"
         break;
         default:
         console.log("TODO DATATYPE: ",this.valueExpr.datatype, this.types)

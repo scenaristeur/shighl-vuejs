@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import DebugProperties from '@/components/DebugProperties.vue'
 import FormInput from '@/components/FormInput.vue'
 import FormTextarea from '@/components/FormTextarea.vue'

@@ -19,14 +19,11 @@
 </template>
 
 <script>
-import store from '@/store'
-import FillingForm from './mixins/FillingForm.js'
 
 //  import componentName from '@/components/componentName.vue'
 
 export default {
   name: 'FormTextArea',
-  mixins: [FillingForm],
   components: {
     //  componentName
   },
@@ -52,9 +49,8 @@ export default {
     updateValue (value) {
       console.log(value, this.currentShape, this.predicate)
       let data = {shape: this.currentShape, predicate: this.predicate, value: value, datatype: this.datatype}
-      store.commit('local/fillForm', data)
-      //  this.fill(this.currentShape, this.predicate, value, this.datatype)
-      //this.$store.commit('updateValue', e.target.value)
+      this.$store.commit('local/fillForm', data)
+
     }
   },
 }

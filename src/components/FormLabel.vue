@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
 
 export default {

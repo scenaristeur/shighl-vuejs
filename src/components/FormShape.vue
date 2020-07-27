@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import FormExpression from '@/components/FormExpression.vue'
 import DebugProperties from '@/components/DebugProperties.vue'
 

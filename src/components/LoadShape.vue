@@ -13,7 +13,6 @@
 
 
 <script>
-import store from '@/store'
 import ShexMixin from './mixins/ShexMixin.js'
 import FormTab from '@/components/FormTab.vue'
 
@@ -28,7 +27,7 @@ export default {
   },
   data: function () {
     return {
-      shape_url: "https://holacratie.solid.community/public/Schema/observation.shex",
+      shape_url: "https://holacratie.solid.community/public/Schema/tension.shex",
       currentShape: {id:"Loading Shape..."},
       shapes: [],
       footprint_shapes: [],
@@ -51,8 +50,8 @@ export default {
   async mounted(){
     console.log("shexLoader", window.shexLoader)
     await this.load_schema( this.shape_url ) // see ShexMixin
-    store.commit('local/setShapeUrl', this.shape_url)
-    console.log(store.state.local.shape_url)
+    this.$store.commit('local/setShapeUrl', this.shape_url)
+    console.log(this.$store.state.local.shape_url)
     console.log("fin load")
   },
   methods: {

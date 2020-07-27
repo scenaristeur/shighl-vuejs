@@ -7,31 +7,30 @@
         ></b-form-input>
         <b-input-group-append>
           <b-button variant="outline-success" @click="load">Load</b-button>
-          </b-input-group-append>
-        </b-input-group>
-        <div>
-</div>
+        </b-input-group-append>
+      </b-input-group>
+      <div>
       </div>
     </div>
-  </template>
+  </div>
+</template>
 
-  <script>
-  import store from '@/store'
-  import ShexMixin from './mixins/ShexMixin.js'
+<script>
+import ShexMixin from './mixins/ShexMixin.js'
 
-  export default {
-    name: 'ShapeRemoteLoader',
-    mixins: [ ShexMixin],
-    data: function () {
-      return {
-        shape_url: "https://holacratie.solid.community/public/Schema/issue.shex"
-      }
-    },
-    methods: {
-      load() {
-        console.log(this.shape_url)
-        this.load_schema(this.shape_url)
-      }
-    },
-  }
-  </script>
+export default {
+  name: 'ShapeRemoteLoader',
+  mixins: [ ShexMixin],
+  data: function () {
+    return {
+      shape_url: "https://holacratie.solid.community/public/Schema/issue.shex"
+    }
+  },
+  methods: {
+    load() {
+      console.log(this.shape_url)
+      this.load_schema(this.shape_url)
+    }
+  },
+}
+</script>

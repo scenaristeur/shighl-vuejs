@@ -16,7 +16,6 @@
   </template>
 
   <script>
-  import store from '@/store'
   import FormField from '@/components/FormField.vue'
 
   export default {

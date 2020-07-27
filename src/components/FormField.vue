@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import store from '@/store'
+
 import ShapeTripleConstraint from '@/components/ShapeTripleConstraint.vue'
 import FormLabel from '@/components/FormLabel.vue'
 

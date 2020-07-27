@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import DebugProperties from '@/components/DebugProperties.vue'
 import FormRadio from '@/components/FormRadio.vue'
 

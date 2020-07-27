@@ -1,10 +1,6 @@
-
 import UtilMixin from '@/components/mixins/UtilMixin.js'
 
 export default {
-  created: function () {
-
-  },
   mixins: [ UtilMixin],
   methods: {
     buildTtl(ttlData){

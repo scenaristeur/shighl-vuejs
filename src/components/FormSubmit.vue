@@ -2,7 +2,7 @@
   <div class="form-submit container">
     <div class="mt-3">
 
-<!--      <SaveParameters />-->
+      <!--      <SaveParameters />-->
       {{ message }}
       <!--  <b-button-group>-->
       <!--  <b-button variant="success" @click="save" disabled>Save on currentShape (footprint)</b-button>
@@ -28,11 +28,12 @@
 import auth from 'solid-auth-client';
 import UtilMixin from './mixins/UtilMixin.js'
 import TtlMixin from './mixins/TtlMixin.js'
+import SolidMixin from './mixins/SolidMixin.js'
 import SaveParameters from '@/components/SaveParameters.vue'
 
 export default {
   name: 'FormSubmit',
-  mixins: [UtilMixin, TtlMixin],
+  mixins: [UtilMixin, TtlMixin, SolidMixin],
   components: {
     SaveParameters
   },
@@ -47,10 +48,7 @@ export default {
       shapes: [],*/
     }
   },
-  created(){
-    this.fc   = new SolidFileClient(auth)
-    console.log(this.fc)
-  },
+
   computed: {
     webId(){
       return this.$store.state.local.webId

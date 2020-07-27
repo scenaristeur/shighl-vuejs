@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import store from '@/store'
+
 import ExpressionSwitcher from '@/components/ExpressionSwitcher.vue'
 import DebugProperties from '@/components/DebugProperties.vue'
 

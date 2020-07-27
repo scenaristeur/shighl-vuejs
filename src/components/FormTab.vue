@@ -33,11 +33,13 @@
     </div>
   </b-tab>
 
+<!--  -->
   <b-tab
   v-for="shape in shapes"
+v-bind:class="{ active: currentShape == shape.id }"
   :key="shape.id" :title="shape.localname"
   @click="changeCurrentShape(shape.id)">
-
+<!--test {{currentShape}} & {{shape.id}} -->
   <FormShape :shape="shape"/>
   <FormSubmit :shape="shape"/>
 
@@ -50,7 +52,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import SolidLogin from '@/components/solid/SolidLogin.vue'
 import ShapeChoose from '@/components/ShapeChoose.vue'
 import FormShape from '@/components/FormShape.vue'
@@ -66,12 +67,18 @@ export default {
   },
   data: function () {
     return {
-      /*  currentShape: "",
-      shapes: [],*/
+      //  currentShape: "",
+/*      shapes: [],*/
+    }
+  },
+  watch:{
+    currentShape(s){
+  console.log("2new current shape",s)
     }
   },
   computed: {
-    currentShape () {
+    currentShape (s) {
+      console.log("new current shape",s)
       return this.$store.state.local.currentShape
     },
     shapes () {
@@ -87,7 +94,7 @@ export default {
   methods: {
     changeCurrentShape(shape){
       console.log(shape)
-      store.commit('local/setCurrentShape', shape)
+      this.$store.commit('local/setCurrentShape', shape)
     }
   }
 }

@@ -9,6 +9,7 @@ export default {
         }else{
           ln = uri.substr(uri.lastIndexOf("/")).substr(1)
         }
+        ln = ln.length == 0 ? uri : ln 
       }
       return ln
     },

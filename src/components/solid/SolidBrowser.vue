@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import store from '@/store'
 //  import componentName from '@/components/componentName.vue'
 
 export default {

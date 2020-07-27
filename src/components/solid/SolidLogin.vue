@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import store from '@/store'
 import auth from 'solid-auth-client';
 import { fetchDocument } from 'tripledoc';
 import { foaf } from 'rdf-namespaces';
@@ -46,23 +45,23 @@ export default {
         this.logged = false
         this.webId = null
         console.log('The user is not logged in', this.logged, this.webId)
-        store.commit('local/setWebId', this.webId)
-        store.commit('local/setStorage', "")
+        this.$store.commit('local/setWebId', this.webId)
+        this.$store.commit('local/setStorage', "")
       }
 
       else{
         this.logged = true
         this.webId = session.webId
         console.log(`The user is ${session.webId}`)
-        store.commit('local/setWebId', this.webId)
+        this.$store.commit('local/setWebId', this.webId)
         let st  = await solid.data[session.webId].storage
         this.storage = `${st}`
         console.log(this.storage)
-        store.commit('local/setStorage', this.storage)
+        this.$store.commit('local/setStorage', this.storage)
         /*  console.log("STORAGE",`${solid.data.user.storage}`)
         let st = `${solid.data.user.storage}`
         console.log("STORAGE",st)
-        store.commit('storage', st)*/
+        this.$store.commit('storage', st)*/
       }
 
     })
