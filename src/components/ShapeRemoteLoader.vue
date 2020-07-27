@@ -2,15 +2,15 @@
   <div class="shape-remote-loader mb-3">
     <div>
       <b-input-group  class="mt-3"> <!--prepend="ShEx shape"-->
-        <b-form-input v-model="shape_url"
-        placeholder="click on the suggestions button"
+        <b-form-input class="col-md-3" v-model="shape_url"
+        placeholder="see suggestions"
         ></b-form-input>
         <b-input-group-append>
           <b-button variant="outline-success" @click="load">Load</b-button>
-          <b-link href="https://holacratie.solid.community/public/Schema/" target="_blank">
-            <b-button variant="info" >Suggestions</b-button></b-link>
           </b-input-group-append>
         </b-input-group>
+        <div>
+</div>
       </div>
     </div>
   </template>
@@ -24,7 +24,7 @@
     mixins: [ ShexMixin],
     data: function () {
       return {
-        shape_url: "https://holacratie.solid.community/public/Schema/circle.shex"
+        shape_url: "https://holacratie.solid.community/public/Schema/issue.shex"
       }
     },
     methods: {
@@ -33,10 +33,5 @@
         this.load_schema(this.shape_url)
       }
     },
-    computed: {
-      currentShape () {
-        return this.$store.state.local.currentShape
-      }
-    }
   }
   </script>

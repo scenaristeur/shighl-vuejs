@@ -2,11 +2,10 @@
   <div class="form-select">
 
     <div>
-      [ not implemented yet see "Contribute menu" ;-)]
-      <b-form-select disabled v-model="selected" :options="options" @change='updateValue'></b-form-select>
-      <b-button variant="secondary" disabled>New</b-button>
+      <b-form-select v-model="selected" :options="options"></b-form-select>
+      <b-button v-if="source" variant="secondary" disabled>New</b-button>
     </div>
-    <div class="brute-hide">
+    <div class="brute d-none">
       <h5>{{ $options.name }}</h5>
 
       <div class="mt-3">Selected: <strong>{{ selected }}</strong></div>
@@ -29,7 +28,7 @@ import DebugProperties from '@/components/DebugProperties.vue'
 
 export default {
   name: 'FormSelect',
-    mixins: [FillingForm],
+  mixins: [FillingForm],
   components: {
     DebugProperties
   },
@@ -43,34 +42,31 @@ export default {
   data: function () {
     return {
       selected: null,
-      options: [
-        { value: null, text: 'Please select an option' },
-        { value: 'a', text: 'This is First option' },
-        { value: 'b', text: 'Selected Option' },
-        { value: { C: '3PO' }, text: 'This is an option with object value' },
-        { value: 'd', text: 'This one is disabled', disabled: true }
-      ]
+      options: [ ]
+    }
+  },
+  mounted(){
+    if(this.values != undefined){
+      console.log("VALUES CJ", this.values)
+      this.values.forEach((v, i) => {
+        v = v.value != null ? v.value : v
+        let o = {value:v , text:v}
+        console.log("o",o)
+        this.options.push(o)
+        console.log("opts1",this.options)
+      });
+      console.log("opts2",this.options)
     }
   },
   watch : {
-    values(vs){
-      console.log("VALUES CJ", vs)
-      this.options =    [
-        { value: 'd', text: 'This one is disabled'}
-
-      ]
-    }
+    selected(value){
+      console.log(value, this.currentShape, this.predicate)
+      this.fill(this.currentShape, this.predicate, value, "selectForm")
+    },
   },
   computed: {
     currentShape () {
       return this.$store.state.local.currentShape
-    }
-  },
-  methods: {
-    updateValue (value) {
-      console.log(value, this.currentShape, this.predicate)
-      this.fill(this.currentShape, this.predicate, value, "selectForm")
-      //this.$store.commit('updateValue', e.target.value)
     }
   },
 }

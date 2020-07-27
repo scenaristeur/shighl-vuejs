@@ -89,6 +89,9 @@ export default {
         case "http://www.w3.org/ns/solid/terms#webid":
         t = "webid"
         break;
+        case "http://www.w3.org/2001/XMLSchema#dateTime":
+        t = "time"
+        break;
         default:
         console.log("TODO DATATYPE: ",this.valueExpr.datatype, this.types)
         t = "text"

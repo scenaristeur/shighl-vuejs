@@ -4,31 +4,46 @@
 
     <div>
       <b-tabs content-class="mt-3">
-        <b-tab title="First" active><p>Select a Tab to use a Form</p>
-        <!--  <p>
-            <b-button disabled>Toggle Debug</b-button>
-          </p>-->
+        <b-tab title="First" active>
+          <p>Select a Tab to use a Form or choose
+            <b-link href="https://holacratie.solid.community/public/Schema/" target="_blank">another ShEx shapes</b-link>.
 
-          <div class="brute-hide">
-            <h5>{{ $options.name }}</h5>
-            currentShape : {{ currentShape}}<br>
-            shapes length ({{ shapes.length }}): {{ shapes }}<br>
-            footprint_shapes ({{ footprint_shapes.length}}): {{ footprint_shapes}}<br>
-            translate_shapes ({{ translate_shapes.length}}): {{ translate_shapes}}<br>
+
+            <ShapeChoose />
+            <SolidLogin />
+            <!--
+            <SolidLogin popupUri="/popup.html">
+            <div slot-scope="{ initializing, login, logout, loggedIn, webId }">
+            <button v-if="initializing">Loading...</button>
+            <button v-else-if="loggedIn" @click="logout()" :title="webId">Log out</button>
+            <button v-else @click="login()">Log In</button>
           </div>
-        </b-tab>
+        </SolidLogin>-->
+      </p>
+      <!--  <p>
+      <b-button disabled>Toggle Debug</b-button>
+    </p>-->
 
-        <b-tab
-        v-for="shape in shapes"
-        :key="shape.id" :title="shape.localname"
-        @click="changeCurrentShape(shape.id)">
+    <div class="brute-hide">
+      <h5>{{ $options.name }}</h5>
+      currentShape : {{ currentShape}}<br>
+      shapes length ({{ shapes.length }}): {{ shapes }}<br>
+      footprint_shapes ({{ footprint_shapes.length}}): {{ footprint_shapes}}<br>
+      translate_shapes ({{ translate_shapes.length}}): {{ translate_shapes}}<br>
+    </div>
+  </b-tab>
 
-        <FormShape :shape="shape"/>
-        <FormSubmit :shape="shape"/>
-    
-      </b-tab>
-    </b-tabs>
-  </div>
+  <b-tab
+  v-for="shape in shapes"
+  :key="shape.id" :title="shape.localname"
+  @click="changeCurrentShape(shape.id)">
+
+  <FormShape :shape="shape"/>
+  <FormSubmit :shape="shape"/>
+
+</b-tab>
+</b-tabs>
+</div>
 
 
 </div>
@@ -36,13 +51,15 @@
 
 <script>
 import store from '@/store'
+import SolidLogin from '@/components/solid/SolidLogin.vue'
+import ShapeChoose from '@/components/ShapeChoose.vue'
 import FormShape from '@/components/FormShape.vue'
 import FormSubmit from '@/components/FormSubmit.vue'
 
 export default {
   name: 'FormTab',
   components: {
-    FormShape, FormSubmit
+    FormShape, FormSubmit, SolidLogin, ShapeChoose
   },
   props: {
     //  msg: String

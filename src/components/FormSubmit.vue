@@ -1,38 +1,40 @@
 <template>
-  <div class="form-submit">
+  <div class="form-submit container">
     <div class="mt-3">
 
-       {{ message }}
-      <b-button-group>
-        <!--  <b-button variant="success" @click="save" disabled>Save on currentShape (footprint)</b-button>
+<!--      <SaveParameters />-->
+      {{ message }}
+      <!--  <b-button-group>-->
+      <!--  <b-button variant="success" @click="save" disabled>Save on currentShape (footprint)</b-button>
 
-        <b-button variant="info" disabled>Choose Where to save</b-button>-->
+      <b-button variant="info" disabled>Choose Where to save</b-button>-->
 
-        <b-button variant="warning" @click="download">Download</b-button>
-        <b-button variant="info" @click="save">Stream that Activity</b-button>
-        <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) Add me to your trusted apps</b-button>
-        <b-button variant="success" @click="savePublic">Save on holacratie Pod</b-button>
-      </b-button-group>
+      <b-button variant="warning" @click="download">Download</b-button>
+      <b-button variant="info" @click="save">Stream that Activity</b-button>
+      <b-button variant="success" @click="savePod">Save on my POD (public/shighltest) Add me to your trusted apps</b-button>
+      <b-button variant="success" @click="savePublic">Save on holacratie Pod</b-button>
+      <!--</b-button-group>-->
     </div>
-    CurrentShape : <a :href="currentShape" target="blank">{{ currentShape}}</a><br>
-    WebId : <a :href="webId" target="blank">{{ webId }}</a><br>
-    Storage: <a :href="storage" target="blank">{{ storage }}</a><br>
+    <ul>
+      <li> <a :href="currentShape" target="blank">currentShape</a></li>
+      <li> <a :href="webId" target="blank">{{ webId }}</a></li>
+      <li> <a :href="storage" target="blank">{{ storage }}</a></li>
+    </ul>
 
   </div>
 </template>
 
 <script>
 import auth from 'solid-auth-client';
-import store from '@/store'
 import UtilMixin from './mixins/UtilMixin.js'
 import TtlMixin from './mixins/TtlMixin.js'
-//  import componentName from '@/components/componentName.vue'
+import SaveParameters from '@/components/SaveParameters.vue'
 
 export default {
   name: 'FormSubmit',
   mixins: [UtilMixin, TtlMixin],
   components: {
-    //  componentName
+    SaveParameters
   },
   props: {
     attribut: String
@@ -40,7 +42,7 @@ export default {
 
   data: function () {
     return {
-      message: "mm"
+      message: ""
       /*  currentShape: "",
       shapes: [],*/
     }

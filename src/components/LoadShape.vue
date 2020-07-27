@@ -1,15 +1,6 @@
 <template>
   <div class="load-shape">
-    <!--
-    <SolidLogin popupUri="/popup.html">
-    <div slot-scope="{ initializing, login, logout, loggedIn, webId }">
-    <button v-if="initializing">Loading...</button>
-    <button v-else-if="loggedIn" @click="logout()" :title="webId">Log out</button>
-    <button v-else @click="login()">Log In</button>
-  </div>
-</SolidLogin>-->
-<SolidLogin />
-<ShapeChoose />
+
 <!--currentShape : {{ currentShape.id }}<br>-->
 <FormTab />
 
@@ -25,8 +16,7 @@
 import store from '@/store'
 import ShexMixin from './mixins/ShexMixin.js'
 import FormTab from '@/components/FormTab.vue'
-import SolidLogin from '@/components/solid/SolidLogin.vue'
-import ShapeChoose from '@/components/ShapeChoose.vue'
+
 
 
 export default {
@@ -34,11 +24,11 @@ export default {
 
   mixins: [ShexMixin],
   components: {
-    FormTab, SolidLogin, ShapeChoose
+    FormTab
   },
   data: function () {
     return {
-      shape_url: "https://holacratie.solid.community/public/Schema/tension.shex",
+      shape_url: "https://holacratie.solid.community/public/Schema/observation.shex",
       currentShape: {id:"Loading Shape..."},
       shapes: [],
       footprint_shapes: [],

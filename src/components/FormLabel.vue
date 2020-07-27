@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     label () {
-      return this.localname(this.text).charAt(0).toUpperCase() + this.localname(this.text).slice(1)
+      return this.text != undefined ? this.localname(this.text).charAt(0).toUpperCase() + this.localname(this.text).slice(1) : this.text
     }
   }
 }
