@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "92594932e70cb9fe7d2b",
-    "url": "/shighl-vuejs/css/about.e6c0a025.css"
+    "revision": "40180faf6a5a6151be57",
+    "url": "/shighl-vuejs/css/about.cf580945.css"
   },
   {
-    "revision": "39a277ee506e428a4517",
-    "url": "/shighl-vuejs/css/app.96403ef0.css"
+    "revision": "f7288cc19bff661c6531",
+    "url": "/shighl-vuejs/css/app.4fc632a5.css"
   },
   {
     "revision": "dea710a76c773f6f69e8",
@@ -16,32 +16,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "74ab12cdfd2cb034d1d2562c4ef1771e",
+    "revision": "2b6e0a529110a167be97b0e394128ac0",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "92594932e70cb9fe7d2b",
-    "url": "/shighl-vuejs/js/about.24082743.js"
+    "revision": "40180faf6a5a6151be57",
+    "url": "/shighl-vuejs/js/about.3c93afd6.js"
   },
   {
-    "revision": "39a277ee506e428a4517",
-    "url": "/shighl-vuejs/js/app.599c3b8f.js"
+    "revision": "f7288cc19bff661c6531",
+    "url": "/shighl-vuejs/js/app.97cf5157.js"
   },
   {
-    "revision": "f59410f6286a93b2de90",
-    "url": "/shighl-vuejs/js/chunk-1741c46e.2809a684.js"
+    "revision": "7d484c0dbf5f2af4f293",
+    "url": "/shighl-vuejs/js/chunk-1741c46e.178865d9.js"
   },
   {
-    "revision": "057c1d6d3030dea32272",
-    "url": "/shighl-vuejs/js/chunk-3c66732d.e9a5e2e8.js"
+    "revision": "a7a3190365fa8f5f2bc2",
+    "url": "/shighl-vuejs/js/chunk-3c66732d.79f086c5.js"
   },
   {
-    "revision": "877c330662b623c1e312",
-    "url": "/shighl-vuejs/js/chunk-9397529a.3f53556f.js"
+    "revision": "20a23730d21943f429d3",
+    "url": "/shighl-vuejs/js/chunk-9397529a.d7d6620b.js"
   },
   {
-    "revision": "cd41475d3f4a691a6773",
-    "url": "/shighl-vuejs/js/chunk-f155d606.35f8b4fc.js"
+    "revision": "707471410e8c376f9fdd",
+    "url": "/shighl-vuejs/js/chunk-f155d606.f37bc655.js"
   },
   {
     "revision": "dea710a76c773f6f69e8",
