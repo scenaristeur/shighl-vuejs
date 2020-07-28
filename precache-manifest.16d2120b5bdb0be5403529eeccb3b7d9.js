@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0159c139e4cca1137562",
-    "url": "/shighl-vuejs/css/about.7dd2934c.css"
+    "revision": "b3d8b791dd9951ecce7e",
+    "url": "/shighl-vuejs/css/about.0bd1eaf3.css"
   },
   {
-    "revision": "7e00c3bf314447e09c93",
+    "revision": "17129bb980523270839d",
     "url": "/shighl-vuejs/css/app.4fc632a5.css"
   },
   {
@@ -16,32 +16,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "5ce430f519d906ca5b48eae114149112",
+    "revision": "d0a7a5e04c59d961fd8b8e80c90b18e0",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "0159c139e4cca1137562",
-    "url": "/shighl-vuejs/js/about.0f5feec9.js"
+    "revision": "b3d8b791dd9951ecce7e",
+    "url": "/shighl-vuejs/js/about.9de88e21.js"
   },
   {
-    "revision": "7e00c3bf314447e09c93",
-    "url": "/shighl-vuejs/js/app.f49eaaaf.js"
+    "revision": "17129bb980523270839d",
+    "url": "/shighl-vuejs/js/app.ba3d14a9.js"
   },
   {
-    "revision": "c6ffd3c244dd6a92a84d",
-    "url": "/shighl-vuejs/js/chunk-41d01dc8.6f85d3b8.js"
+    "revision": "28bd5195f4225bbb711a",
+    "url": "/shighl-vuejs/js/chunk-41d01dc8.e6b8da63.js"
   },
   {
-    "revision": "50ff2658d71366c7b007",
-    "url": "/shighl-vuejs/js/chunk-4f335db7.459a7d61.js"
+    "revision": "32c32a648b616c7cd909",
+    "url": "/shighl-vuejs/js/chunk-4f335db7.48d3a3f2.js"
   },
   {
-    "revision": "bcfd519a6fbeb957d1e7",
-    "url": "/shighl-vuejs/js/chunk-4f34e8d8.3d812fe8.js"
+    "revision": "3fa58312583c5f462d5e",
+    "url": "/shighl-vuejs/js/chunk-4f34e8d8.df1a885f.js"
   },
   {
-    "revision": "c54540c3e7d911e7ab00",
-    "url": "/shighl-vuejs/js/chunk-4f492a12.bb36be26.js"
+    "revision": "3ee263103278f5fd3ef7",
+    "url": "/shighl-vuejs/js/chunk-4f492a12.86424220.js"
   },
   {
     "revision": "dea710a76c773f6f69e8",
@@ -66,6 +66,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "79a0f6712c55b0717094eb9dadf3f82f",
     "url": "/shighl-vuejs/vendor/shex-loader-browserify.min.js"
+  },
+  {
+    "revision": "4858ffccba47ae4ba691f2fd52549d9c",
+    "url": "/shighl-vuejs/vendor/shex-parser-browserify.js"
+  },
+  {
+    "revision": "527b3329dbab4eb89e86c2aee67f26f4",
+    "url": "/shighl-vuejs/vendor/shex-parser-browserify.min.js"
   },
   {
     "revision": "c46af35a8510690ecdaa6795fa1b78e9",
