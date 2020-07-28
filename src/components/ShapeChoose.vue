@@ -2,8 +2,8 @@
   <div class="shape-choose">
 
     <ShapeRemoteLoader />
-    <div class="row d-none">
-      <div class="col">
+    <div class="row">
+      <div class="col  d-none">
           <ShapeEditor />
       </div>
       <div class="col">

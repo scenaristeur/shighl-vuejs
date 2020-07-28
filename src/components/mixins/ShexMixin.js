@@ -2,7 +2,16 @@ import UtilMixin from '@/components/mixins/UtilMixin.js'
 export default {
   mixins: [ UtilMixin],
   methods: {
-    async load_schema(shape_url){
+    async load_raw_schema(content){
+      const parser = window.shexParser.construct('http://example.com/base/url/')
+      console.log(parser)
+      console.warn(parser.parse(content), null, 2)
+      let schema = parser.parse(content)
+      this.$store.commit('local/setSchema',schema)
+      //app.schema = JSON.stringify(loaded.schema);
+      this.splitSchema(schema)
+    },
+    async load_remote_schema(shape_url){
       let app = this
       window.shexLoader.load([shape_url], [], [], []).then(loaded => {
         if (loaded.schema){

@@ -1,14 +1,14 @@
 <template>
   <div class="load-shape">
 
-<!--currentShape : {{ currentShape.id }}<br>-->
-<FormTab />
+    <!--currentShape : {{ currentShape.id }}<br>-->
+    <FormTab />
 
-<div class="brute-hide">
-  shape_url : {{ shape_url }}<br>
-  currentShape : {{ currentShape }}<br>
-</div>
-</div>
+    <div class="brute-hide">
+      shape_url : {{ shape_url }}<br>
+      currentShape : {{ currentShape }}<br>
+    </div>
+  </div>
 </template>
 
 
@@ -20,7 +20,6 @@ import FormTab from '@/components/FormTab.vue'
 
 export default {
   name: 'LoadShape',
-
   mixins: [ShexMixin],
   components: {
     FormTab
@@ -41,7 +40,7 @@ export default {
 
     console.log("shexCore", shexCore)
     console.log("shexLoader", shexLoader)
-    /*    console.log("shexParser", shexParser)*/
+
     console.log("ShExJison", ShExJison)
     /*  let sl = new ShexLoader()
     console.log("SL",sl)*/
@@ -49,15 +48,11 @@ export default {
 
   async mounted(){
     console.log("shexLoader", window.shexLoader)
-    await this.load_schema( this.shape_url ) // see ShexMixin
+    await this.load_remote_schema( this.shape_url ) // see ShexMixin
     this.$store.commit('local/setShapeUrl', this.shape_url)
     console.log(this.$store.state.local.shape_url)
     console.log("fin load")
   },
-  methods: {
-
-
-  }
 }
 
 
