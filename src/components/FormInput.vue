@@ -11,8 +11,11 @@
       </b-input-group>
     </div>
     <div v-else>
-      <b-form-input  @input="updateValue"
-      :id="`type-${type}`" :type="type" :placeholder="placeholder" :value="value"></b-form-input>
+      <b-input-group size="lg" :append="this.valueExpr.datatype">
+        <b-form-input size="lg" @input="updateValue"
+        :id="`type-${type}`" :type="type" :placeholder="placeholder" :value="value" ></b-form-input>
+      </b-input-group>
+
     </div>
 
     <div class="brute-hide">
@@ -92,6 +95,7 @@ export default {
         default:
         console.log("TODO DATATYPE: ",this.valueExpr.datatype, this.types)
         t = "text"
+
       }
       return t
     },

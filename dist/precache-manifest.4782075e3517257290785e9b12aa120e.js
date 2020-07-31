@@ -1,50 +1,50 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b3d8b791dd9951ecce7e",
-    "url": "/shighl-vuejs/css/about.0bd1eaf3.css"
+    "revision": "22894b17f7628620cf57",
+    "url": "/shighl-vuejs/css/about.5ad24acc.css"
   },
   {
-    "revision": "17129bb980523270839d",
-    "url": "/shighl-vuejs/css/app.4fc632a5.css"
+    "revision": "226f0f91d804cbdd4792",
+    "url": "/shighl-vuejs/css/app.63e5f86a.css"
   },
   {
-    "revision": "dea710a76c773f6f69e8",
-    "url": "/shighl-vuejs/css/chunk-vendors.cbc2a074.css"
+    "revision": "dee9a721a71cdd78fd4e",
+    "url": "/shighl-vuejs/css/chunk-vendors.71c9f8df.css"
   },
   {
     "revision": "82b9c7a5a3f405032b1db71a25f67021",
     "url": "/shighl-vuejs/img/logo.82b9c7a5.png"
   },
   {
-    "revision": "d0a7a5e04c59d961fd8b8e80c90b18e0",
+    "revision": "c4c3884bdb3911e4d14b4b125b279dd9",
     "url": "/shighl-vuejs/index.html"
   },
   {
-    "revision": "b3d8b791dd9951ecce7e",
-    "url": "/shighl-vuejs/js/about.9de88e21.js"
+    "revision": "22894b17f7628620cf57",
+    "url": "/shighl-vuejs/js/about.b42ecc34.js"
   },
   {
-    "revision": "17129bb980523270839d",
-    "url": "/shighl-vuejs/js/app.ba3d14a9.js"
+    "revision": "226f0f91d804cbdd4792",
+    "url": "/shighl-vuejs/js/app.2fdacffd.js"
   },
   {
-    "revision": "28bd5195f4225bbb711a",
-    "url": "/shighl-vuejs/js/chunk-41d01dc8.e6b8da63.js"
+    "revision": "4c1e21c862cbce90af70",
+    "url": "/shighl-vuejs/js/chunk-41d01dc8.60a75634.js"
   },
   {
-    "revision": "32c32a648b616c7cd909",
-    "url": "/shighl-vuejs/js/chunk-4f335db7.48d3a3f2.js"
+    "revision": "5118344493742cb840f5",
+    "url": "/shighl-vuejs/js/chunk-4f335db7.91cf909e.js"
   },
   {
-    "revision": "3fa58312583c5f462d5e",
-    "url": "/shighl-vuejs/js/chunk-4f34e8d8.df1a885f.js"
+    "revision": "dd90b892ff5d706df0bc",
+    "url": "/shighl-vuejs/js/chunk-4f34e8d8.38bd627c.js"
   },
   {
-    "revision": "3ee263103278f5fd3ef7",
-    "url": "/shighl-vuejs/js/chunk-4f492a12.86424220.js"
+    "revision": "99efe87b8e32fe788a0d",
+    "url": "/shighl-vuejs/js/chunk-4f492a12.88c7f123.js"
   },
   {
-    "revision": "dea710a76c773f6f69e8",
+    "revision": "dee9a721a71cdd78fd4e",
     "url": "/shighl-vuejs/js/chunk-vendors.d87fead2.js"
   },
   {
