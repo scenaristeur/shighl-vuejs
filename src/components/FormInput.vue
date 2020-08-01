@@ -11,11 +11,11 @@
       </b-input-group>
     </div>
     <div v-else>
-      <b-input-group size="lg" :append="this.valueExpr.datatype">
+      <b-input-group size="lg" >
         <b-form-input size="lg" @input="updateValue"
-        :id="`type-${type}`" :type="type" :placeholder="placeholder" :value="value" ></b-form-input>
+        :id="`type-${type}`" :type="type" :placeholder="placeholder" :value="value" ></b-form-input><br>
       </b-input-group>
-
+        <small>{{this.valueExpr.datatype}}</small>
     </div>
 
     <div class="brute-hide">
@@ -72,6 +72,7 @@ export default {
       let t = "text"
       switch (this.valueExpr.datatype) {
         case "http://www.w3.org/2001/XMLSchema#date":
+        case "http://www.w3.org/2001/XMLSchema#dateTime":
         t ="date"
         var local = new Date();
         local.setMinutes(local.getMinutes() - local.getTimezoneOffset());

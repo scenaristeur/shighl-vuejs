@@ -29,7 +29,7 @@ export default {
   methods: {
     load() {
       console.log(this.shape_url)
-      this.load_raw_schema(this.shape_url)
+      this.load_remote_schema(this.shape_url)
     }
   },
 }

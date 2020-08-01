@@ -1,6 +1,17 @@
 <template>
   <div class="hello-world container">
     <h1>{{ msg }}</h1>
+
+    <div class="row">
+      <div class="col m-5">
+        CHAT PLACEHOLDER
+      </div>
+      <div class="col  m-5">
+        PERSONAL NOTES PLACEHOLDER
+      </div>
+
+    </div>
+
     <p>
       The aim of this project is to take a tour of the tools to help you to build
       decentralized apps, by sharing my experiments.<br>

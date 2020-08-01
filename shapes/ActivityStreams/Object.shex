@@ -16,37 +16,33 @@ PREFIX as:     <https://www.w3.org/ns/activitystreams#>
 start = as:Object
 
 as:Object {               # An Object has:
-#schema:name                    xsd:string  ;
-#schema:purpose_raison_d_etre   literal;
-#schema:dateCreated             xsd:date?  ;
-
 #  uri: "https://www.w3.org/ns/activitystreams#Object",
 #   disjointWith : "https://www.w3.org/ns/activitystreams#Link",
-as:attachement                  as:Link OR as:Object ;
-as:attributedTo                  as:Link OR as:Object ;
-as:audience                      as:Link OR as:Object ;
+as:attachement                   as:Object OR as:Link ;
+as:attributedTo                  as:Object OR as:Link ;
+as:audience                      as:Object OR as:Link ;
 as:content                       xsd:string OR rdf:langString ;
-as:context                       as:Link OR as:Object ;
+as:context                       as:Object OR as:Link ;
 as:name                          xsd:string OR rdf:langString ;
-as:endTime                       	xsd:dateTime ;
-as:generator                      as:Link OR as:Object ;
-#icon: "",
-#image: "",
-#inReplyTo: "",
-#location: "",
-#preview: "",
-#published: "",
-#replies: "",
-#startTime: "",
-#summary: "",
-#tag: "",
-#updated: "",
-#url: "",
-#to: "",
-#bto: "",
-#cc: "",
-#bcc: "",
-#mediaType: "",
-#duration: "",
+as:endTime                       xsd:dateTime ;
+as:generator                     as:Object OR as:Link ;
+as:icon                          as:Image OR as:Link ;
+as:image                         as:Image OR as:Link ;
+as:inReplyTo                     as:Object OR as:Link ;
+as:location                      as:Object OR as:Link ;
+as:preview                       as:Object OR as:Link ;
+as:published                     xsd:dateTime ;
+as:replies                       as:Collection ;
+as:startTime                     xsd:dateTime ;
+as:summary                       xsd:string OR rdf:langString ;
+as:tag                           as:Object OR as:Link ;
+as:updated                       xsd:dateTime ;
+as:url                           xsd:anyURI OR as:Link ;
+as:to                            xsd:anyURI OR as:Link ;
+as:bto                           xsd:anyURI OR as:Link ;
+as:cc                            xsd:anyURI OR as:Link ;
+as:bcc                           xsd:anyURI OR as:Link ;
+#as:mediaType                    MIME Media Type ;
+as:duration                      xsd:duration
 
 }
